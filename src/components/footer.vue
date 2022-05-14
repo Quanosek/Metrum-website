@@ -20,8 +20,10 @@ footer {
     padding: 0 3%;
     height: 70px;
     width: 94%;
+
     background-color: var(--secondary);
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     font-size: .9rem;
@@ -39,6 +41,7 @@ a:hover {
 @media (max-width: 768px) {
     footer {
         height: 80px;
+
         justify-content: center;
         flex-direction: column;
         font-size: .8rem;

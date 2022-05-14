@@ -317,7 +317,7 @@ main {
 
 .description {
   text-align: center;
-  margin-bottom: -2rem;
+  margin: 2rem 0 -1rem;
   font-size: 110%;
 
   h1 {
@@ -330,6 +330,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h1 {
+  text-align: center;
+  }
 
   h2 {
     font-size: 1.8rem;
@@ -350,7 +354,7 @@ main {
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   border-radius: 5px;
   border: 1px solid #282a2f;

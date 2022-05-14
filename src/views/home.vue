@@ -1,25 +1,31 @@
 <template>
   <main>
-    <div class="home">
-      <div class="body-header">
-        <carousel />
+
+    <carousel />
+
+    <div class="body-wrapper">
+
+      <div class="body-main">
+
+        <h1>Szybki. Nawet bardzo!</h1>
+        <span>Reaguje na polecenia w mgnieniu oka</span>
+        <h1>Niezawodny</h1>
+        <span>Do twojej dyspozycji przez 99.97% czasu</span>
+        <h1>Dostosuj do swoich potrzeb</h1>
+        <span>Zmień prefix i nie tylko</span>
+
       </div>
-      <div class="body-wrapper">
-        <div class="body-main">
-          <h1>Szybki. Nawet bardzo!</h1>
-          <span>Reaguje na polecenia w mgnieniu oka</span>
-          <h1>Niezawodny</h1>
-          <span>Do twojej dyspozycji przez 99.97% czasu</span>
-          <h1>Dostosuj do swoich potrzeb</h1>
-          <span>Zmień prefix i nie tylko</span>
-        </div>
-        <div class="body-main">
-          <h1 class="text-add">Na co czekasz?</h1>
-          <a href="/" class="pseudo button" id="button__add">Dodaj do serwera</a>
-          <!--<img src="../../public/favicon.svg" alt="logo metrum">-->
-        </div>
+
+      <div class="body-main">
+
+        <h1 class="text-add">Na co czekasz?</h1>
+        <a href="/" class="pseudo button" id="button__add">Dodaj do serwera</a>
+        <!--<img src="../../public/favicon.svg" alt="logo metrum">-->
+        
       </div>
+
     </div>
+
   </main>
 </template>
 
@@ -36,18 +42,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.body-header {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  margin: -60px -3% 0;
-
-  background: linear-gradient(270deg, #122060, #691573);
-  background-size: 400% 400%;
-
-  animation: change 20s ease-in-out infinite;
-}
-
 .body-wrapper {
   flex-flow: row wrap;
   display: flex;
@@ -106,17 +100,5 @@ export default {
   100% {
     text-shadow: 0 0 1rem white
   }
-}
-
-@keyframes change {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
 }
 </style>

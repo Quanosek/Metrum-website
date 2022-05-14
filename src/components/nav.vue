@@ -1,6 +1,5 @@
 <template>
     <nav>
-
         <div class="nav_lp">
             <router-link to="/" draggable="false">
 
@@ -54,16 +53,20 @@ nav {
     padding: 0 3%;
     height: 60px;
     width: 94%;
+
     background-color: var(--secondary);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav_lp a {
+    font-size: .9rem;
+
     display: flex;
     align-items: center;
-    font-size: .9rem;
+
     gap: 1rem;
 }
 
@@ -90,6 +93,7 @@ nav {
     width: 25px;
     height: 3px;
     margin: 5px auto;
+
     background-color: white;
     transition: all .3s ease-in-out;
 
@@ -99,6 +103,7 @@ nav {
         position: absolute;
         width: 25px;
         height: 3px;
+
         background-color: white;
         transition: all .3s ease-in-out;
     }
@@ -138,8 +143,10 @@ nav {
         top: 60px;
         padding: 8px 0 100vh 0;
         width: 100%;
+
         flex-direction: column;
         align-items: center;
+
         transition: .3s;
         gap: 0;
 
@@ -152,8 +159,10 @@ nav {
     .nav_item {
         width: 200px;
         margin: 8px;
+
         display: flex;
         justify-content: center;
+
         font-size: 1.2rem;
     }
 }

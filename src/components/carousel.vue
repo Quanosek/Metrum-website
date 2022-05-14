@@ -1,39 +1,48 @@
 <template>
-  <div class="tabs three">
+  <div class="slider">
 
-    <input id="tabC-1" type='radio' name='tabGroupC' checked>
-    <input id="tabC-2" type='radio' name='tabGroupC'>
-    <input id="tabC-3" type='radio' name='tabGroupC'>
+    <div class='slides' :style="{ right: distance + 'vw' }">
 
-    <div class='row'>
-
-      <div id="logo1">
+      <div class="slide">
         <h1>Metrum</h1>
-        <span>Nasz flagowy bot muzyczny dla Twojego serwera Discord! Urządź karaoke, zagraj w jaka to melodia lub po
-          prostu zagraj ze znajomymi z przyjemną muzyką</span>
-        <br>
-        <a href="" class="pseudo button" id="button__add">Dodaj do serwera</a>
+        <p>Najlepsza lternatywa dla starych botów muzycznych, oferujący niezwykle dużo fukcji, w tym możliwość
+          <b>odtwarzania dowolnych tytułów jak i linków YouTube, Spotify czy SoundColud</b>! Nie czekaj, wypróbuj już
+          teraz!
+        </p>
+        <div class="button_secondary">
+          <a href="#">
+            Dodaj na serwer!<img src="@/assets/link.svg" draggable="false">
+          </a>
+        </div>
       </div>
 
-      <div id="logo2">
+      <div class="slide">
         <h1>Metrum 2</h1>
-        <span>Metrum jest obciążony lub chcesz być w stanie odtwarzać dwie piosenki jednocześnie?</span>
-        <br>
-        <a href="" class="pseudo button" id="button__add">Dodaj do serwera</a>
+        <p>Jeśli główny bot jest zbyt obciążony, albo chcesz być w stanie odtwarzać <b>dwie piosenki jednocześnie</b>
+          ten bot jest idelanym rozwiązaniem!</p>
+        <div class="button_secondary">
+          <a href="#">
+            Dodaj na serwer!<img src="@/assets/link.svg" draggable="false">
+          </a>
+        </div>
       </div>
 
-      <div id="logo3">
+      <div class="slide">
         <h1>Metrum 3</h1>
-        <span>Dostaje aktualizacje jako pierwszy, przez co może nie zawsze być stabilny!</span>
-        <br>
-        <a href="" class="pseudo button" id="button__add">Dodaj do serwera</a>
+        <p>Najmniej oblegana werjsa bota, dodatkowo zawsze <b>jako pierwszy otrzymuje najnowsze fukcje</b>, tym samym
+          potrafi być niestabilny.</p>
+        <div class="button_secondary">
+          <a href="#">
+            Dodaj na serwer!<img src="@/assets/link.svg" draggable="false">
+          </a>
+        </div>
       </div>
 
     </div>
 
-    <label for="tabC-1"><img src="@/assets/logo.jpg" draggable="false"></label>
-    <label for="tabC-2"><img src="@/assets/logo2.jpg" draggable="false"></label>
-    <label for="tabC-3"><img src="@/assets/logo3.jpg" draggable="false"></label>
+    <label @click="distance = 0"><img src="@/assets/logo.jpg" draggable="false"></label>
+    <label @click="distance = 100"><img src="@/assets/logo2.jpg" draggable="false"></label>
+    <label @click="distance = 200"><img src="@/assets/logo3.jpg" draggable="false"></label>
 
   </div>
 </template>
@@ -41,57 +50,142 @@
 <script>
 export default {
   name: 'ComponentCarousel',
+  data() {
+    return {
+      distance: 0,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.slider {
+  margin: 0 -3%;
+  padding: 6rem 0 0;
+  text-align: center;
+  overflow: hidden;
+  height: 35rem;
 
-.tabs {
-  align-items: center;
-  flex-direction: row-reverse;
+  background: linear-gradient(270deg, #122060, #691573);
+  background-size: 400% 400%;
+
+  animation: change 20s ease-in-out infinite;
 }
 
 h1 {
   font-size: 4rem;
 }
 
-#button__add {
-  animation: jump 1s ease infinite;
-  background-color: white;
-  color: #691573;
+p {
   margin-top: 2rem;
-  font-size: 22px;
+
+  color: white;
+  font-size: 1.2rem;
 }
 
-.row {
-  display: flex;
+.slides {
+  width: 300vw;
 
+  display: flex;
+  text-align: center;
+  position: relative;
+
+  transition: .3s, filter 1.5s ease-in-out;
+
+  div {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+}
+
+.slide {
+  padding: 0 1%;
+}
+
+.button_secondary {
+  margin: 2rem 0 5rem;
+  padding: .8rem 1.6rem;
+  width: 220px !important;
+
+  font-size: 1.4rem;
+  border-radius: 5px;
+
+  cursor: pointer;
+  animation: jump 1s ease infinite;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  img {
+    filter: invert(1);
+    position: relative;
+    bottom: 1px;
+  }
 }
 
 label {
+
+  margin: 0 2rem;
+
   img {
-    max-width: 8rem;
+    width: 8rem;
     transition: .2s;
     border-radius: 0.5rem;
   }
 
-  & :hover {
-    box-shadow: 0 0 1.25rem 0.25rem rgba($color: black, $alpha: 0.2);
-    transform: scale(1.05);
+  @media (min-width: 1025px) {
+    & :hover {
+      box-shadow: 0 0 1.25rem 0.25rem rgba($color: black, $alpha: 0.2);
+      transform: scale(1.05);
+    }
+  }
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
   }
 }
 
 @keyframes jump {
   0% {
-    transform: translateY(0%)
+    transform: translateY(0%);
   }
 
   50% {
-    transform: translateY(20%)
+    transform: translateY(20%);
   }
 
   100% {
-    transform: translateY(0%)
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 768px) {
+.slider {
+  height: 42rem;
+  }
+  label {
+
+    margin: 0 .5rem;
+
+    img {
+      width: 5.5rem;
+    }
   }
 }
 </style>
