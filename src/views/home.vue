@@ -1,27 +1,35 @@
 <template>
   <main>
 
-    <carousel />
+    <Carousel />
 
-    <div class="body-wrapper">
+    <div class="info">
 
-      <div class="body-main">
-
-        <h1>Szybki. Nawet bardzo!</h1>
-        <span>Reaguje na polecenia w mgnieniu oka</span>
-        <h1>Niezawodny</h1>
-        <span>Do twojej dyspozycji przez 99.97% czasu</span>
-        <h1>Dostosuj do swoich potrzeb</h1>
-        <span>Zmień prefix i nie tylko</span>
-
+      <div>
+        <h1>Używaj jak chcesz!</h1>
+        <p>Możesz bez problemu korzystać z własnego prefixu, jak i ukośnika!</p>
       </div>
-
-      <div class="body-main">
-
-        <h1 class="text-add">Na co czekasz?</h1>
-        <a href="/" class="pseudo button" id="button__add">Dodaj do serwera</a>
-        <!--<img src="../../public/favicon.svg" alt="logo metrum">-->
-        
+      <div>
+        <h1>Pełna dowolność!</h1>
+        <p>Bot umożliwia odtwarzanie po wyszukanym tytule, jak i linkach. Możesz tworzyć własne kolejki, lub włączyć
+          autoodtwarzanie!</p>
+      </div>
+      <div class="media">
+        <img src="@/assets/media/YouTube.svg" alt="YouTube">
+        <img src="@/assets/media/Spotify.svg" alt="Spotify">
+        <img src="@/assets/media/SoundCloud.svg" alt="SoundCloud">
+      </div>
+      <div>
+        <h1>Mnogość funkcji!</h1>
+        <p>Do dyspozycji jest m.in. zapętlanie, system pomijania z głosowaniem, odtwarzanie transmisji live, pauzowanie,
+          przewijanie i wiele więcej.</p>
+      </div>
+      <div>
+        <h1>Szybki i zawsze dostępny</h1>
+        <p>Zapewnia zawsze błyskawiczną odpowiedź na komendy, autodołączanie do kanałów głosowych i z nich wychodzenie!
+          <br>
+          Kiedy akurat jest niedostępny, znaczy, że wgrywane są aktualizacje.
+        </p>
       </div>
 
     </div>
@@ -30,75 +38,44 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import carousel from '../components/carousel.vue'
+import Carousel from '../components/carousel.vue';
 
 export default {
   name: 'viewHome',
   components: {
-    carousel
-  }
-}
+    Carousel,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.body-wrapper {
-  flex-flow: row wrap;
-  display: flex;
-  justify-content: space-around;
-  padding: 8rem 0;
-  overflow: hidden;
-}
-
-.body-main {
+.info {
+  margin-top: 3rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin: 1rem;
-  padding: 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 0 0rem 0.25rem #3b3d3f;
-  border: solid;
-  border-color: #23272A;
-  background-color: #3b3d3f;
-  max-width: 36rem;
-  min-width: 100%;
+  gap: 2.5rem;
 
-  /* img {} */
-
-  @media screen and (min-width: 800px) {
-    min-width: 32rem;
-  }
-
-  h1 {
-    font-size: 1.75rem;
+  div {
+    text-align: center;
   }
 }
 
-#button__add {
-  background-color: white;
-  color: #691573;
-  margin-top: 2rem;
-  font-size: 22px;
-}
+.media {
+  display: flex;
+  gap: 3rem;
 
-.text-add {
-  animation: neon 1s ease infinite;
-  font-size: 3rem !important;
-}
-
-@keyframes neon {
-  0% {
-    text-shadow: 0 0 1rem white
+  img {
+  height: 100px;
+  width: auto;
   }
 
-  50% {
-    text-shadow: 0 0 3rem white
+  @media (max-width: 768px) {
+  gap: 2rem;
+  img {
+  height: 60px;
+  width: auto;
   }
-
-  100% {
-    text-shadow: 0 0 1rem white
   }
 }
 </style>

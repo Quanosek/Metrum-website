@@ -5,13 +5,13 @@
 
       <div class="slide">
         <h1>Metrum</h1>
-        <p>Najlepsza lternatywa dla starych botów muzycznych, oferujący niezwykle dużo fukcji, w tym możliwość
-          <b>odtwarzania dowolnych tytułów jak i linków YouTube, Spotify czy SoundColud</b>! Nie czekaj, wypróbuj już
-          teraz!
+        <p>Bot będący najlepszą, darmową alternatywą dla popularnych botów muzycznych Discord, oferujący niezwykle dużo
+          fukcji, w tym <b>możliwość odtwarzania, nie tylko dowolnych tytułów, ale również linków YouTube, Spotify czy
+            SoundColud</b> zawierających jeden utwór lub całą playlistę! Nie czekaj, wypróbuj już teraz!
         </p>
-        <div class="button_secondary">
+        <div class="button secondary">
           <a href="#">
-            Dodaj na serwer!<img src="@/assets/link.svg" draggable="false">
+            Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
           </a>
         </div>
       </div>
@@ -20,9 +20,9 @@
         <h1>Metrum 2</h1>
         <p>Jeśli główny bot jest zbyt obciążony, albo chcesz być w stanie odtwarzać <b>dwie piosenki jednocześnie</b>
           ten bot jest idelanym rozwiązaniem!</p>
-        <div class="button_secondary">
+        <div class="button secondary">
           <a href="#">
-            Dodaj na serwer!<img src="@/assets/link.svg" draggable="false">
+            Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
           </a>
         </div>
       </div>
@@ -31,18 +31,18 @@
         <h1>Metrum 3</h1>
         <p>Najmniej oblegana werjsa bota, dodatkowo zawsze <b>jako pierwszy otrzymuje najnowsze fukcje</b>, tym samym
           potrafi być niestabilny.</p>
-        <div class="button_secondary">
+        <div class="button secondary">
           <a href="#">
-            Dodaj na serwer!<img src="@/assets/link.svg" draggable="false">
+            Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
           </a>
         </div>
       </div>
 
     </div>
 
-    <label @click="distance = 0"><img src="@/assets/logo.jpg" draggable="false"></label>
-    <label @click="distance = 100"><img src="@/assets/logo2.jpg" draggable="false"></label>
-    <label @click="distance = 200"><img src="@/assets/logo3.jpg" draggable="false"></label>
+    <label @click="distance = 0"><img alt="logo1" src="@/assets/bot/logo1.jpg" draggable="false"></label>
+    <label @click="distance = 100"><img alt="logo2" src="@/assets/bot/logo2.jpg" draggable="false"></label>
+    <label @click="distance = 200"><img alt="logo3" src="@/assets/bot/logo3.jpg" draggable="false"></label>
 
   </div>
 </template>
@@ -105,7 +105,7 @@ p {
   padding: 0 1%;
 }
 
-.button_secondary {
+.button {
   margin: 2rem 0 5rem;
   padding: .8rem 1.6rem;
   width: 220px !important;
@@ -132,16 +132,17 @@ p {
 label {
 
   margin: 0 2rem;
+  cursor: pointer;
 
   img {
     width: 8rem;
     transition: .2s;
-    border-radius: 0.5rem;
+    border-radius: 10px;
   }
 
   @media (min-width: 1025px) {
     & :hover {
-      box-shadow: 0 0 1.25rem 0.25rem rgba($color: black, $alpha: 0.2);
+      box-shadow: 0 0 1.25rem 0.25rem rgba($color: #000000, $alpha: 0.2);
       transform: scale(1.05);
     }
   }
@@ -176,9 +177,10 @@ label {
 }
 
 @media (max-width: 768px) {
-.slider {
-  height: 42rem;
+  .slider {
+    height: 42rem;
   }
+
   label {
 
     margin: 0 .5rem;

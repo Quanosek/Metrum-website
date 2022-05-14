@@ -3,7 +3,7 @@
         <div class="nav_lp">
             <router-link to="/" draggable="false">
 
-                <img id="logo" src="@/assets/logo.jpg" alt="logo" draggable="false">
+                <img id="logo" src="../../public/favicon.svg" alt="logo" draggable="false">
                 <h1>Metrum</h1>
 
             </router-link>
@@ -14,15 +14,15 @@
             <div class="menu" @click="isActive = !isActive" :class="isActive ? 'active' : ''">
 
                 <router-link to="/">
-                    <div class="nav_item button_primary">Strona&nbsp;główna</div>
-                </router-link>
-
-                <router-link to="/info">
-                    <div class="nav_item button_primary">Informacje</div>
+                    <div class="nav_item button primary">Strona&nbsp;główna</div>
                 </router-link>
 
                 <router-link to="/commands">
-                    <div class="nav_item button_primary">Lista komend</div>
+                    <div class="nav_item button primary">Lista komend</div>
+                </router-link>
+
+                <router-link to="/author">
+                    <div class="nav_item button success">O&nbsp;autorze</div>
                 </router-link>
 
             </div>
@@ -49,7 +49,7 @@ export default {
 <style lang="scss" scoped>
 nav {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     padding: 0 3%;
     height: 60px;
     width: 94%;
@@ -71,8 +71,7 @@ nav {
 }
 
 #logo {
-    height: 40px;
-    border-radius: 5px;
+    height: 30px;
 }
 
 .menu {
@@ -94,7 +93,7 @@ nav {
     height: 3px;
     margin: 5px auto;
 
-    background-color: white;
+    background-color: #ffffff;
     transition: all .3s ease-in-out;
 
     &::before,
@@ -104,7 +103,7 @@ nav {
         width: 25px;
         height: 3px;
 
-        background-color: white;
+        background-color: #ffffff;
         transition: all .3s ease-in-out;
     }
 
@@ -137,7 +136,7 @@ nav {
     }
 
     .menu {
-        z-index: 2;
+        z-index: 10;
         position: fixed;
         right: -100%;
         top: 60px;

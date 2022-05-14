@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-    z-index: 1;
+    z-index: 10;
     padding: 0 3%;
     height: 70px;
     width: 94%;

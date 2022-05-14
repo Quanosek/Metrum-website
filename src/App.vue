@@ -29,38 +29,44 @@ export default {
   --text2: #b9bbbe;
 }
 
-.button_primary {
+.button {
   padding: 8px 10px;
-
   font-size: .9rem;
   border-radius: 3px;
 
-  background-color: #5865f2;
-  transition: .1s, filter 1.5s ease-in-out;
+  transition: .15s, filter 1.5s ease-in-out;
   cursor: pointer;
 
-  @media (min-width: 1025px) {
-    &:hover {
-      background-color: #4752c4;
+  &.primary {
+    background-color: #5865f2;
+
+    @media (min-width: 1025px) {
+      &:hover {
+        background-color: #4752c4;
+      }
     }
   }
-}
 
-.button_secondary {
-  padding: 8px 10px;
+  &.secondary {
+    background-color: #4f545c;
 
-  font-size: .9rem;
-  border-radius: 3px;
-
-  background-color: #4f545c;
-  transition: .1s, filter 1.5s ease-in-out;
-  cursor: pointer;
-
-  @media (min-width: 1025px) {
-    &:hover {
-      background-color: #686d73;
+    @media (min-width: 1025px) {
+      &:hover {
+        background-color: #474c53;
+      }
     }
   }
+
+  &.success {
+    background-color: #3ba55c;
+
+    @media (min-width: 1025px) {
+      &:hover {
+        background-color: #359553;
+      }
+    }
+  }
+
 }
 
 /* <--- HTML BODY MAIN ---> */
