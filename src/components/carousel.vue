@@ -107,7 +107,7 @@ p {
 
 .button {
   margin: 2rem 0 5rem;
-  padding: .8rem 1.6rem;
+  padding: .8rem 1rem;
   width: 220px !important;
 
   font-size: 1.4rem;

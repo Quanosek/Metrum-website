@@ -25,6 +25,13 @@
                     <div class="nav_item button success">O&nbsp;autorze</div>
                 </router-link>
 
+                <a href="#">
+                    <div class="nav_item button secondary">
+                        Zostaw&nbsp;opinię
+                        <img alt="link" src="@/assets/icons/link.svg" draggable="false">
+                    </div>
+                </a>
+
             </div>
 
             <div class="hamburger" @click="isActive = !isActive" :class="isActive ? 'active' : ''">
@@ -72,6 +79,19 @@ nav {
 
 #logo {
     height: 30px;
+}
+
+.nav_item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+        height: 15px;
+        filter: invert(1);
+        position: relative;
+        bottom: 1px;
+    }
 }
 
 .menu {
@@ -140,7 +160,7 @@ nav {
         position: fixed;
         right: -100%;
         top: 60px;
-        padding: 8px 0 100vh 0;
+        padding: 2rem 0 100vh 0;
         width: 100%;
 
         flex-direction: column;
@@ -163,6 +183,11 @@ nav {
         justify-content: center;
 
         font-size: 1.2rem;
+        gap: 12px;
+
+        img {
+        height: 20px;
+        }
     }
 }
 </style>

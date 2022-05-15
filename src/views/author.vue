@@ -8,8 +8,8 @@
         przyszłość.</p>
 
       <div class="photos">
-        <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek">
         <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało">
+        <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek">
       </div>
 
       <hr>
@@ -31,7 +31,24 @@
     </div>
 
     <div class="more">
-      <h2>Mam jeszcze kilka innych botów, nie zapomnij ich przetestować!</h2>
+      <h2>Mam jeszcze kilka innych botów, nie&nbsp;zapomnij ich przetestować!</h2>
+      <div class="bots">
+
+        <div>
+          <a href="#">
+            <img src="@/assets/author/dimention.png" alt="dimention">
+          </a>
+          <p>Dimention</p>
+        </div>
+
+        <div>
+          <a href="#">
+            <img src="@/assets/author/mc_connect.jpg" alt="mc_connect">
+          </a>
+          <p>MC_Connect</p>
+        </div>
+
+      </div>
     </div>
 
   </main>
@@ -71,12 +88,12 @@ export default {
   }
 }
 
-#kubaklalo {
-  z-index: 1;
+#quanosek {
+  opacity: 0;
   transition: .6s, filter 1.5s ease-in-out;
 
   &:hover {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -85,8 +102,12 @@ hr {
   border: none;
   background-color: var(--text1);
   height: 1px;
-  width: 300px;
+  width: 400px;
   border-radius: 5px;
+
+  @media (max-width: 768px) {
+  width: 300px;
+  }
 }
 
 .links {
@@ -121,7 +142,54 @@ hr {
 }
 
 .more {
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bots {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 2rem;
+
+  div {
+    height: 11rem;
+    width: 8rem;
+  }
+
+  img {
+    height: 8rem;
+    width: auto;
+    transition: .2s;
+    border-radius: 10px;
+
+    @media (min-width: 1025px) {
+      &:hover {
+        box-shadow: 0 0 1.25rem 0.25rem rgba($color: #000000, $alpha: 0.2);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 0 2rem;
+
+    div {
+      height: 9rem;
+      width: 8rem;
+    }
+
+    img {
+      height: 6rem;
+    }
+
+    p {
+      margin: .5rem;
+    }
+  }
 }
 </style>
