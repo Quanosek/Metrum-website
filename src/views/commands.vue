@@ -332,7 +332,7 @@ main {
   align-items: center;
 
   h1 {
-  text-align: center;
+    text-align: center;
   }
 
   h2 {
@@ -359,6 +359,12 @@ main {
   border-radius: 5px;
   border: 1px solid #282a2f;
   background-color: #303339;
+
+  @media (min-width: 1025px) {
+    &:hover {
+      border-color: #131517;
+    }
+  }
 }
 
 .snippet {

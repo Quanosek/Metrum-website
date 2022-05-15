@@ -143,7 +143,7 @@ label {
   @media (min-width: 1025px) {
     & :hover {
       box-shadow: 0 0 1.25rem 0.25rem rgba($color: #000000, $alpha: 0.2);
-      transform: scale(1.05);
+      transform: translateY(-5%);
     }
   }
 }

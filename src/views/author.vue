@@ -40,10 +40,9 @@
           </a>
           <p>Dimention</p>
         </div>
-
         <div>
           <a href="#">
-            <img src="@/assets/author/mc_connect.jpg" alt="mc_connect">
+            <img src="@/assets/author/mc_connect.png" alt="mc_connect">
           </a>
           <p>MC_Connect</p>
         </div>
@@ -106,7 +105,7 @@ hr {
   border-radius: 5px;
 
   @media (max-width: 768px) {
-  width: 300px;
+    width: 300px;
   }
 }
 
@@ -154,41 +153,56 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem 2rem;
+  gap: 2rem 1rem;
 
   div {
-    height: 11rem;
+    height: 10rem;
     width: 8rem;
+    background-color: #2f3136;
+    padding: .6rem .6rem;
+    border-radius: 8px;
+    transition: .15s;
+
+    p {
+      margin-top: .5rem;
+      font-size: 90%;
+      font-weight: 600;
+      transition: .15s;
+    }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        background-color: #292b2f;
+        box-shadow: 0 .2rem 1rem 0rem rgba($color: #000000, $alpha: 0.2);
+        transform: translateY(-5%);
+
+        p {
+          color: #ffffff;
+        }
+      }
+    }
   }
 
   img {
     height: 8rem;
     width: auto;
-    transition: .2s;
     border-radius: 10px;
-
-    @media (min-width: 1025px) {
-      &:hover {
-        box-shadow: 0 0 1.25rem 0.25rem rgba($color: #000000, $alpha: 0.2);
-        transform: scale(1.05);
-      }
-    }
   }
 
   @media (max-width: 768px) {
-    gap: 0 2rem;
+    gap: 1rem;
 
     div {
-      height: 9rem;
-      width: 8rem;
+      height: 8rem;
+      width: 6rem;
+
+      p {
+        font-size: 85%;
+      }
     }
 
     img {
       height: 6rem;
-    }
-
-    p {
-      margin: .5rem;
     }
   }
 }
