@@ -29,6 +29,8 @@ export default {
   --text2: #b9bbbe;
 }
 
+/* <--- GLOBAL CLASSES ---> */
+
 .button {
   padding: 8px 10px;
   font-size: .9rem;
@@ -69,7 +71,7 @@ export default {
 
 }
 
-/* <--- HTML BODY MAIN ---> */
+/* <--- RESET STYLE ---> */
 
 html,
 body {

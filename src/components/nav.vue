@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* desktop menu */
 nav {
     position: fixed;
     z-index: 10;
@@ -186,7 +187,7 @@ nav {
         gap: 12px;
 
         img {
-        height: 20px;
+            height: 20px;
         }
     }
 }

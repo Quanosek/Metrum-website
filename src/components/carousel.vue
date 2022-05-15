@@ -79,7 +79,7 @@ h1 {
 p {
   margin-top: 2rem;
 
-  color: white;
+  color: #ffffff;
   font-size: 1.2rem;
 }
 
