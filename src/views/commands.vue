@@ -375,6 +375,7 @@ main {
     display: flex;
     align-items: center;
     justify-items: center;
+    cursor: pointer;
     background-color: #ffffff;
     border-radius: 5px;
 
