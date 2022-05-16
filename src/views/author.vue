@@ -3,9 +3,9 @@
 
     <div class="title">
       <h1>Nazywam się Jakub&nbsp;Kłało!</h1>
-      <p>Jestem 20-letnim studentem Inżynierii Multimediów. Już od 2&nbsp;lat tworzę boty Discord oraz różne strony
-        internetowe.<br>Jest to nie&nbsp;tylko moja wielka pasja, ale też coś, z&nbsp;czym nią planuję wiązać swoją
-        przyszłość.</p>
+      <p>Jestem 20-letnim studentem Inżynierii Multimediów. Już od ponda 2&nbsp;lat tworzę najróżniejsze boty Discord
+        czy strony internetowe.<br>Jest to nie&nbsp;tylko moja wielka pasja, ale też coś, z&nbsp;czym planuję wiązać
+        swoją przyszłość.</p>
 
       <div class="photos">
         <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało">
@@ -35,13 +35,14 @@
       <div class="bots">
 
         <div>
-          <a href="#">
+          <a href="http://dimention.klalo.pl/" target="_blank">
             <img src="@/assets/author/dimention.png" alt="dimention">
           </a>
           <p>Dimention</p>
         </div>
         <div>
-          <a href="#">
+          <a href="https://discord.com/api/oauth2/authorize?client_id=908847270169022575&permissions=414464732240&scope=bot%20applications.commands"
+            target="_blank">
             <img src="@/assets/author/mc_connect.png" alt="mc_connect">
           </a>
           <p>MC_Connect</p>
