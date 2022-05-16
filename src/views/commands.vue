@@ -10,6 +10,7 @@
       <p>Jeśli zapomniał*ś jaki jest obecnie ustawiony prefix bota, wystarczy, że&nbsp;go oznaczysz wpisując na czacie
         <b>@Metrum</b>!
       </p>
+      <p>Kliknij w ikonę obok nazwy komendy, aby ją skopiować!</p>
     </div>
 
     <div class="category">

@@ -10,7 +10,8 @@
             SoundColud</b> zawierających jeden utwór lub całą playlistę! Nie czekaj, wypróbuj już teraz!
         </p>
         <div class="button secondary">
-          <a href="#">
+          <a href="https://discord.com/api/oauth2/authorize?client_id=890577647980146688&permissions=414501432640&scope=bot%20applications.commands"
+            target="_blank">
             Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
           </a>
         </div>
@@ -19,9 +20,11 @@
       <div class="slide">
         <h1>Metrum 2</h1>
         <p>Jeśli główny bot jest zbyt obciążony, albo chcesz być w stanie odtwarzać <b>dwie piosenki jednocześnie</b>
-          ten bot jest idelanym rozwiązaniem!</p>
+          ten bot jest idelanym rozwiązaniem!
+        </p>
         <div class="button secondary">
-          <a href="#">
+          <a href="https://discord.com/api/oauth2/authorize?client_id=901543092547637289&permissions=414501432640&scope=bot%20applications.commands"
+            target="_blank">
             Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
           </a>
         </div>
@@ -30,9 +33,11 @@
       <div class="slide">
         <h1>Metrum 3</h1>
         <p>Najmniej oblegana werjsa bota, dodatkowo zawsze <b>jako pierwszy otrzymuje najnowsze fukcje</b>, tym samym
-          potrafi być niestabilny.</p>
+          potrafi być niestabilny.
+        </p>
         <div class="button secondary">
-          <a href="#">
+          <a href="https://discord.com/api/oauth2/authorize?client_id=901543130468323399&permissions=414501432640&scope=bot%20applications.commands"
+            target="_blank">
             Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
           </a>
         </div>
@@ -40,9 +45,9 @@
 
     </div>
 
-    <label @click="distance = 0"><img alt="logo1" src="@/assets/bot/logo1.jpg" draggable="false"></label>
-    <label @click="distance = 100"><img alt="logo2" src="@/assets/bot/logo2.jpg" draggable="false"></label>
-    <label @click="distance = 200"><img alt="logo3" src="@/assets/bot/logo3.jpg" draggable="false"></label>
+    <label @click="distance = 0"><img alt="Metrum 1" src="@/assets/bot/logo1.png" draggable="false"></label>
+    <label @click="distance = 100"><img alt="Metrum 2" src="@/assets/bot/logo2.png" draggable="false"></label>
+    <label @click="distance = 200"><img alt="Metrum 3" src="@/assets/bot/logo3.png" draggable="false"></label>
 
   </div>
 </template>
@@ -66,7 +71,7 @@ export default {
   overflow: hidden;
   height: 35rem;
 
-  background: linear-gradient(270deg, #122060, #691573);
+  background: linear-gradient(270deg, #001e61, #691f74);
   background-size: 400% 400%;
 
   animation: change 20s ease-in-out infinite;

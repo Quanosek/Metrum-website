@@ -15,15 +15,15 @@
       <hr>
 
       <div class="links">
-        <a href="https://klalo.pl" target="_blank">
+        <a href="https://www.klalo.pl/" target="_blank">
           <img src="@/assets/icons/website.svg" alt="website" draggable="false"></a>
-        <a href="https://discordapp.com/users/405318200998232064" target="_blank">
+        <a href="https://discordapp.com/users/405318200998232064/" target="_blank">
           <img src="@/assets/icons/discord.svg" alt="discord" draggable="false"></a>
-        <a href="https://github.com/Quanosek" target="_blank">
+        <a href="https://github.com/Quanosek/" target="_blank">
           <img src="@/assets/icons/github.svg" alt="github" draggable="false"></a>
-        <a href="https://www.facebook.com/Quanosek" target="_blank">
+        <a href="https://facebook.com/Quanosek/" target="_blank">
           <img src="@/assets/icons/facebook.svg" alt="facebook" draggable="false"></a>
-        <a href="https://twitter.com/Quanosek" target="_blank">
+        <a href="https://twitter.com/Quanosek/" target="_blank">
           <img src="@/assets/icons/twitter.svg" alt="twitter" draggable="false"></a>
       </div>
 
