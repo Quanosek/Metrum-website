@@ -20,7 +20,7 @@
         <div class="command-name">
           <h3>Przewinięcie utworu do przodu o&nbsp;podaną liczbę sekund (domyślnie:&nbsp;10)</h3>
           <span class="snippet">forward (czas)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forward')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forward')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -29,7 +29,7 @@
         <div class="command-name">
           <h3>Wyświetlenie tekstu do&nbsp;odtwarzanego utworu</h3>
           <span class="snippet">lyrics (tytuł)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('lyrics')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('lyrics')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -38,7 +38,7 @@
         <div class="command-name">
           <h3>Wstrzymanie/wznowienie odtwarzania utworu</h3>
           <span class="snippet">pause
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('pause')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('pause')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -47,7 +47,7 @@
         <div class="command-name">
           <h3>Odtwarzanie muzyki (podaj tytuł utworu lub&nbsp;link Youtube, Spotify albo&nbsp;SoundCloud!)</h3>
           <span class="snippet">play (tytuł lub link)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('play')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('play')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -56,7 +56,7 @@
         <div class="command-name">
           <h3>Wznownienie odtwarzania utworu</h3>
           <span class="snippet">resume
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('resume')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('resume')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -65,7 +65,7 @@
         <div class="command-name">
           <h3>Przewinięcie utworu do&nbsp;tyłu o&nbsp;podaną liczbę sekund (domyślnie:&nbsp;10)</h3>
           <span class="snippet">rewind (czas)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('rewind')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('rewind')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -74,7 +74,7 @@
         <div class="command-name">
           <h3>Przewinięcie utworu do&nbsp;podanego czasu (w&nbsp;sekundach)</h3>
           <span class="snippet">seek (czas)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('seek')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('seek')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -83,7 +83,7 @@
         <div class="command-name">
           <h3>Pominięcie obecnie granego utworu (głosowanie)</h3>
           <span class="snippet">skip
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('skip')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('skip')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -99,7 +99,7 @@
         <div class="command-name">
           <h3>Dodanie obecnie granego utworu na&nbsp;koniec kolejki</h3>
           <span class="snippet">addend (tytuł lub link)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('addend')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('addend')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -108,7 +108,7 @@
         <div class="command-name">
           <h3>Dodanie podobnego do&nbsp;obecnie granego utworu na&nbsp;koniec kolejki</h3>
           <span class="snippet">addrelated
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('addrelated')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('addrelated')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -117,7 +117,7 @@
         <div class="command-name">
           <h3>Odtworzenie poprzednio granego utworu w&nbsp;kolejce</h3>
           <span class="snippet">previous
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('previous')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('previous')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -126,7 +126,7 @@
         <div class="command-name">
           <h3>Autoodtwarzanie podobnych utworów (radio&nbsp;utworu)</h3>
           <span class="snippet">radio
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('radio')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('radio')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -135,7 +135,7 @@
         <div class="command-name">
           <h3>Przełączanie zapętlenia: utworu/kolejki/wyłączone</h3>
           <span class="snippet">repeat
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('repeat')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('repeat')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -144,7 +144,7 @@
         <div class="command-name">
           <h3>Jednorazowe wymieszanie kolejki utworów (głosowanie)</h3>
           <span class="snippet">shuffle
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('shuffle')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('shuffle')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -160,7 +160,7 @@
         <div class="command-name">
           <h3>Wiadomość informacyjna</h3>
           <span class="snippet">help
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('help')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('help')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -169,7 +169,7 @@
         <div class="command-name">
           <h3>Zaproś mnie na&nbsp;swój serwer</h3>
           <span class="snippet">invite
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('invite')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('invite')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -178,7 +178,7 @@
         <div class="command-name">
           <h3>Informacje o&nbsp;odtwarzanym utworze</h3>
           <span class="snippet">nowplaying
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('nowplaying')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('nowplaying')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -187,7 +187,7 @@
         <div class="command-name">
           <h3>Ping-pong</h3>
           <span class="snippet">ping
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('ping')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('ping')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -196,7 +196,7 @@
         <div class="command-name">
           <h3>Informacje o&nbsp;kolejce utworów</h3>
           <span class="snippet">queue
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('queue')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('queue')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -205,7 +205,7 @@
         <div class="command-name">
           <h3>Wyszukiwanie utworów po&nbsp;podanym tytule</h3>
           <span class="snippet">search (tytuł lub link)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('search')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('search')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -221,7 +221,7 @@
         <div class="command-name">
           <h3>Dodanie podanego utworu jako&nbsp;następny w&nbsp;kolejce</h3>
           <span class="snippet">add (tytuł lub link)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('add')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('add')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -230,7 +230,7 @@
         <div class="command-name">
           <h3>Wyczyszczenie całej kolejki (łącznie z&nbsp;obecnie granym utworem)</h3>
           <span class="snippet">clear
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('clear')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('clear')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -239,7 +239,7 @@
         <div class="command-name">
           <h3>Wymuszenie wyjścia z&nbsp;kanału głosowego</h3>
           <span class="snippet">forceleave
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forceleave')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forceleave')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -248,7 +248,7 @@
         <div class="command-name">
           <h3>Wymuszenie puszczenia podanego utworu</h3>
           <span class="snippet">forceplay (tytuł lub link)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forceplay')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forceplay')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -257,7 +257,7 @@
         <div class="command-name">
           <h3>Wymuszenie pominięcia utworu</h3>
           <span class="snippet">forceskip
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forceskip')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('forceskip')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -266,7 +266,7 @@
         <div class="command-name">
           <h3>Pominięcie określonej liczby utworów w&nbsp;kolejce (domyślnie:&nbsp;1)</h3>
           <span class="snippet">jump (liczba)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('jump')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('jump')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -275,7 +275,7 @@
         <div class="command-name">
           <h3>Przesunięcie wybranej pozycji w&nbsp;kolejce utworów</h3>
           <span class="snippet">move (skąd) (gdzie)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('move')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('move')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -284,7 +284,7 @@
         <div class="command-name">
           <h3>Zmiana prefixu bota</h3>
           <span class="snippet">prefix
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('prefix')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('prefix')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
@@ -293,7 +293,7 @@
         <div class="command-name">
           <h3>Usunięcie wybranej pozycji z&nbsp;kolejki utworów (domyślnie obecnie grany)</h3>
           <span class="snippet">remove (numer)
-            <button title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('remove')">
+            <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('remove')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
             </button>
           </span>
