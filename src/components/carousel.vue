@@ -6,8 +6,8 @@
       <div class="slide">
         <h1>Metrum</h1>
         <p>Bot będący najlepszą, darmową alternatywą dla popularnych botów muzycznych Discord, oferujący niezwykle dużo
-          fukcji, w tym <b>możliwość odtwarzania, nie tylko dowolnych tytułów, ale również linków YouTube, Spotify czy
-            SoundColud</b> zawierających jeden utwór lub całą playlistę! Nie czekaj, wypróbuj już teraz!
+          funkcji, w tym <b>możliwość odtwarzania, nie tylko dowolnych tytułów, ale również linków YouTube, Spotify czy
+            SoundCloud</b> zawierających jeden utwór lub całą playlistę! Nie czekaj, wypróbuj już teraz!
         </p>
         <div class="button secondary">
           <a href="https://discord.com/api/oauth2/authorize?client_id=890577647980146688&permissions=414501432640&scope=bot%20applications.commands"
@@ -20,7 +20,7 @@
       <div class="slide">
         <h1>Metrum 2</h1>
         <p>Jeśli główny bot jest zbyt obciążony, albo chcesz być w stanie odtwarzać <b>dwie piosenki jednocześnie</b>
-          ten bot jest idelanym rozwiązaniem!
+          ten bot jest idealnym rozwiązaniem!
         </p>
         <div class="button secondary">
           <a href="https://discord.com/api/oauth2/authorize?client_id=901543092547637289&permissions=414501432640&scope=bot%20applications.commands"
@@ -32,8 +32,8 @@
 
       <div class="slide">
         <h1>Metrum 3</h1>
-        <p>Najmniej oblegana werjsa bota, dodatkowo zawsze <b>jako pierwszy otrzymuje najnowsze fukcje</b>, tym samym
-          potrafi być niestabilny.
+        <p>Najmniej oblegana wersja bota, dodatkowo zawsze <b>jako pierwszy otrzymuje najnowsze funkcje</b>, ale przez
+          to potrafi być niestabilny.
         </p>
         <div class="button secondary">
           <a href="https://discord.com/api/oauth2/authorize?client_id=901543130468323399&permissions=414501432640&scope=bot%20applications.commands"

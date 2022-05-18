@@ -12,7 +12,7 @@
       <div>
         <h1>Pełna dowolność!</h1>
         <p>Bot umożliwia odtwarzanie po wyszukanym tytule, jak i&nbsp;linkach. Możesz tworzyć własne kolejki, lub
-          włączyć autoodtwarzanie!</p>
+          włączyć auto-odtwarzanie!</p>
       </div>
 
       <div class="media">
@@ -30,7 +30,7 @@
 
       <div>
         <h1>Szybki i&nbsp;zawsze dostępny</h1>
-        <p>Zapewnia zawsze błyskawiczną odpowiedź na komendy, autodołączanie do kanałów głosowych i&nbsp;z&nbsp;nich
+        <p>Zapewnia zawsze błyskawiczną odpowiedź na komendy, auto-dołączanie do kanałów głosowych i&nbsp;z&nbsp;nich
           wychodzenie!
           <br>
           Kiedy akurat jest niedostępny, znaczy, że&nbsp;wgrywane są aktualizacje.

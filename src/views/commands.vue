@@ -54,7 +54,7 @@
         </div>
 
         <div class="command-name">
-          <h3>Wznownienie odtwarzania utworu</h3>
+          <h3>Wznowienie odtwarzania utworu</h3>
           <span class="snippet">resume
             <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('resume')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">
@@ -124,7 +124,7 @@
         </div>
 
         <div class="command-name">
-          <h3>Autoodtwarzanie podobnych utworów (radio&nbsp;utworu)</h3>
+          <h3>Auto-odtwarzanie podobnych utworów (radio&nbsp;utworu)</h3>
           <span class="snippet">radio
             <button type="button" title="kliknij, aby skopiować!" onclick="navigator.clipboard.writeText('radio')">
               <img src="@/assets/icons/copy.svg" alt="skopiuj" draggable="false">

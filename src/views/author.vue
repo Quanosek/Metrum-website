@@ -35,10 +35,10 @@
       <div class="bots">
 
         <div>
-          <a href="http://dimention.klalo.pl/" target="_blank">
-            <img src="@/assets/author/dimention.png" alt="dimention">
+          <a href="http://dimension.klalo.pl/" target="_blank">
+            <img src="@/assets/author/dimension.png" alt="dimension">
           </a>
-          <p>Dimention</p>
+          <p>Dimension</p>
         </div>
         <div>
           <a href="https://discord.com/api/oauth2/authorize?client_id=908847270169022575&permissions=414464732240&scope=bot%20applications.commands"
