@@ -8,8 +8,8 @@
         swoją przyszłość. Jeśli chcesz się dowiedzieć o&nbsp;mnie więcej, sprawdź linki poniżej!</p>
 
       <div class="photos">
-        <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało">
-        <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek">
+        <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało" draggable="false">
+        <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek" draggable="false">
       </div>
 
       <hr>
@@ -34,19 +34,19 @@
       <h2>Mam jeszcze kilka innych botów, nie&nbsp;zapomnij ich przetestować!</h2>
       <div class="bots">
 
-        <div>
-          <a href="http://dimension.klalo.pl/" target="_blank">
-            <img src="@/assets/author/dimension.png" alt="dimension">
-          </a>
-          <p>Dimension</p>
-        </div>
-        <div>
-          <a href="https://discord.com/api/oauth2/authorize?client_id=908847270169022575&permissions=414464732240&scope=bot%20applications.commands"
-            target="_blank">
-            <img src="@/assets/author/mc_connect.png" alt="mc_connect">
-          </a>
-          <p>MC_Connect</p>
-        </div>
+        <a href="http://dimension.klalo.pl/" target="_blank">
+          <div>
+            <img src="@/assets/author/dimension.png" alt="dimension" draggable="false">
+            <p>Dimension</p>
+          </div>
+        </a>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=908847270169022575&permissions=414464732240&scope=bot%20applications.commands"
+          target="_blank">
+          <div>
+            <img src="@/assets/author/mc_connect.png" alt="mc_connect" draggable="false">
+            <p>MC_Connect</p>
+          </div>
+        </a>
 
       </div>
     </div>
@@ -78,6 +78,8 @@ export default {
 
   display: flex;
   justify-content: center;
+
+  user-select: none;
 
   img {
     height: 200px;
@@ -115,6 +117,8 @@ hr {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+
+  user-select: none;
 
   img {
     filter: invert(1);
@@ -156,6 +160,8 @@ hr {
   justify-content: center;
   gap: 2rem 1rem;
 
+  user-select: none;
+
   div {
     height: 10rem;
     width: 8rem;
@@ -166,6 +172,7 @@ hr {
 
     p {
       margin-top: .5rem;
+      color: var(--text2);
       font-size: 90%;
       font-weight: 600;
       transition: .15s;

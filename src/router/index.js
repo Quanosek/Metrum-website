@@ -18,6 +18,12 @@ const routes = [{
         component: () =>
             import ('../views/commands.vue'),
     },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'error',
+        component: () =>
+            import ('../views/error.vue'),
+    },
 ];
 
 const router = createRouter({

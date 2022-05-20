@@ -36,6 +36,8 @@ export default {
   font-size: .9rem;
   border-radius: 3px;
 
+  user-select: none;
+
   transition: .15s, filter 1.5s ease-in-out;
   cursor: pointer;
 

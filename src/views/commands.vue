@@ -377,6 +377,7 @@ main {
   border-radius: 5px;
   background-color: #18191c;
   gap: .5rem;
+  user-select: none;
 
   button {
     display: flex;

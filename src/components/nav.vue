@@ -13,19 +13,19 @@
 
             <div class="menu" @click="isActive = !isActive" :class="isActive ? 'active' : ''">
 
-                <router-link to="/">
+                <router-link to="/" draggable="false">
                     <div class="nav_item button primary">Strona&nbsp;główna</div>
                 </router-link>
 
-                <router-link to="/commands">
+                <router-link to="/commands" draggable="false">
                     <div class="nav_item button primary">Lista komend</div>
                 </router-link>
 
-                <router-link to="/author">
+                <router-link to="/author" draggable="false">
                     <div class="nav_item button success">O&nbsp;autorze</div>
                 </router-link>
 
-                <a href="#">
+                <a href="#" draggable="false">
                     <div class="nav_item button secondary">
                         Zostaw&nbsp;opinię
                         <img alt="link" src="@/assets/icons/link.svg" draggable="false">
@@ -61,6 +61,8 @@ nav {
     padding: 0 3%;
     height: 60px;
     width: 94%;
+    
+    user-select: none;
 
     background-color: var(--secondary);
 

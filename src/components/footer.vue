@@ -1,8 +1,8 @@
 <template>
     <footer>
 
-        <p>Strona stworzona przez: <a href="https://github.com/Quanosek">Quanosek</a> & <a
-                href="https://github.com/Karroteu">Karroteu</a></p>
+        <p>Strona stworzona przez: <a href="https://github.com/Quanosek" draggable="false">Quanosek</a> & <a
+                href="https://github.com/Karroteu" draggable="false">Karroteu</a></p>
         <p class="copyrights">Wszelkie prawa zastrzeżone ©&nbsp;2022</p>
 
     </footer>
@@ -20,6 +20,8 @@ footer {
     padding: 0 3%;
     height: 70px;
     width: 94%;
+
+    user-select: none;
 
     background-color: var(--secondary);
     display: flex;
