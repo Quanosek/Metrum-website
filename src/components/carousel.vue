@@ -20,7 +20,7 @@
           <h1>Metrum</h1>
           <p>Flagowy bot muzyczny, zawierający <b>wszystkie sprawdzone funkcje</b>, nigdy nie&nbsp;zawodzi!</p>
           <div class="invite button secondary">
-            <a href="https://discord.com/api/oauth2/authorize?client_id=890577647980146688&permissions=414501432640&scope=bot%20applications.commands"
+            <a href="https://metrum.klalo.pl/invite/"
               target="_blank">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
             </a>
@@ -33,7 +33,7 @@
               jednocześnie</b> ten bot jest idealnym rozwiązaniem!
           </p>
           <div class="invite button secondary">
-            <a href="https://discord.com/api/oauth2/authorize?client_id=901543092547637289&permissions=414501432640&scope=bot%20applications.commands"
+            <a href="https://metrum.klalo.pl/invite2/"
               target="_blank">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
             </a>
@@ -46,7 +46,7 @@
             przez&nbsp;to potrafi być niestabilny.
           </p>
           <div class="invite button secondary">
-            <a href="https://discord.com/api/oauth2/authorize?client_id=901543130468323399&permissions=414501432640&scope=bot%20applications.commands"
+            <a href="https://metrum.klalo.pl/invite3/"
               target="_blank">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
             </a>
