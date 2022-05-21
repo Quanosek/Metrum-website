@@ -15,15 +15,15 @@
       <hr>
 
       <div class="links">
-        <a href="https://www.klalo.pl/" target="_blank">
+        <a href="https://www.klalo.pl" target="_blank">
           <img src="@/assets/icons/website.svg" alt="website" draggable="false"></a>
-        <a href="https://discordapp.com/users/405318200998232064/" target="_blank">
+        <a href="https://klalo.pl/discord" target="_blank">
           <img src="@/assets/icons/discord.svg" alt="discord" draggable="false"></a>
-        <a href="https://github.com/Quanosek/" target="_blank">
+        <a href="https://klalo.pl/github" target="_blank">
           <img src="@/assets/icons/github.svg" alt="github" draggable="false"></a>
-        <a href="https://facebook.com/Quanosek/" target="_blank">
+        <a href="https://klalo.pl/facebook" target="_blank">
           <img src="@/assets/icons/facebook.svg" alt="facebook" draggable="false"></a>
-        <a href="https://twitter.com/Quanosek/" target="_blank">
+        <a href="https://klalo.pl/twitter" target="_blank">
           <img src="@/assets/icons/twitter.svg" alt="twitter" draggable="false"></a>
       </div>
 
@@ -40,8 +40,7 @@
             <p>Dimension</p>
           </div>
         </a>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=908847270169022575&permissions=414464732240&scope=bot%20applications.commands"
-          target="_blank">
+        <a href="http://discord.klalo.pl/mc_connect" target="_blank">
           <div>
             <img src="@/assets/author/mc_connect.png" alt="mc_connect" draggable="false">
             <p>MC_Connect</p>

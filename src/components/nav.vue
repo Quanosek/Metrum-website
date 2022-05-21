@@ -25,8 +25,8 @@
                     <div class="nav_item button success">O&nbsp;autorze</div>
                 </router-link>
 
-                <a href="#" draggable="false">
-                    <div class="nav_item button secondary">
+                <a draggable="false">
+                    <div class="nav_item button secondary" style="cursor:no-drop">
                         Zostaw&nbsp;opinię
                         <img alt="link" src="@/assets/icons/link.svg" draggable="false">
                     </div>
@@ -61,7 +61,7 @@ nav {
     padding: 0 3%;
     height: 60px;
     width: 94%;
-    
+
     user-select: none;
 
     background-color: var(--secondary);

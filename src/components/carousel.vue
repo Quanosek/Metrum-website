@@ -20,10 +20,9 @@
           <h1>Metrum</h1>
           <p>Flagowy bot muzyczny, zawierający <b>wszystkie sprawdzone funkcje</b>, nigdy nie&nbsp;zawodzi!</p>
           <div class="invite button secondary">
-            <a href="https://metrum.klalo.pl/invite"
-              target="_blank">
+            <router-link :to="{ path: '/invite'}" target="_blank" draggable="false">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
-            </a>
+            </router-link>
           </div>
         </div>
 
@@ -33,10 +32,9 @@
               jednocześnie</b> ten bot jest idealnym rozwiązaniem!
           </p>
           <div class="invite button secondary">
-            <a href="https://metrum.klalo.pl/invite2"
-              target="_blank">
+            <router-link :to="{ path: '/invite2'}" target="_blank" draggable="false">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
-            </a>
+            </router-link>
           </div>
         </div>
 
@@ -46,10 +44,9 @@
             przez&nbsp;to potrafi być niestabilny.
           </p>
           <div class="invite button secondary">
-            <a href="https://metrum.klalo.pl/invite3"
-              target="_blank">
+            <router-link :to="{ path: '/invite3'}" target="_blank" draggable="false">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
-            </a>
+            </router-link>
           </div>
         </div>
 
