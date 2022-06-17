@@ -21,8 +21,6 @@ footer {
     height: 70px;
     width: 94%;
 
-    user-select: none;
-
     background-color: var(--secondary);
     display: flex;
 

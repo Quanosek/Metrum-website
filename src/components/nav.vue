@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="nav_lp">
-            <router-link to="/" draggable="false">
+            <router-link to="/" tabindex="1">
 
                 <img id="logo" src="../../public/favicon.svg" alt="logo" draggable="false">
                 <h1>Metrum</h1>
@@ -13,19 +13,19 @@
 
             <div class="menu" @click="isActive = !isActive" :class="isActive ? 'active' : ''">
 
-                <router-link to="/" draggable="false">
+                <router-link to="/" tabindex="1">
                     <div class="nav_item button primary">Strona&nbsp;główna</div>
                 </router-link>
 
-                <router-link to="/commands" draggable="false">
+                <router-link to="/commands" tabindex="1">
                     <div class="nav_item button primary">Lista komend</div>
                 </router-link>
 
-                <router-link to="/author" draggable="false">
+                <router-link to="/author" tabindex="1">
                     <div class="nav_item button success">O&nbsp;autorze</div>
                 </router-link>
 
-                <a draggable="false">
+                <a> 
                     <div class="nav_item button secondary" style="cursor:no-drop">
                         Zostaw&nbsp;opinię
                         <img alt="link" src="@/assets/icons/link.svg" draggable="false">

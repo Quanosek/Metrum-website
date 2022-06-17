@@ -20,7 +20,7 @@
           <h1>Metrum</h1>
           <p>Flagowy bot muzyczny, zawierający <b>wszystkie sprawdzone funkcje</b>, nigdy nie&nbsp;zawodzi!</p>
           <div class="invite button secondary">
-            <router-link :to="{ path: '/invite'}" target="_blank" draggable="false">
+            <router-link :to="{ path: '/invite'}" target="_blank" tabindex="-1">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
             </router-link>
           </div>
@@ -32,7 +32,7 @@
               jednocześnie</b> ten bot jest idealnym rozwiązaniem!
           </p>
           <div class="invite button secondary">
-            <router-link :to="{ path: '/invite2'}" target="_blank" draggable="false">
+            <router-link :to="{ path: '/invite2'}" target="_blank" tabindex="-1">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
             </router-link>
           </div>
@@ -44,7 +44,7 @@
             przez&nbsp;to potrafi być niestabilny.
           </p>
           <div class="invite button secondary">
-            <router-link :to="{ path: '/invite3'}" target="_blank" draggable="false">
+            <router-link :to="{ path: '/invite3'}" target="_blank" tabindex="-1">
               Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
             </router-link>
           </div>
@@ -52,9 +52,9 @@
 
       </div>
 
-      <label @click="distance = 100"><img alt="Metrum 1" src="@/assets/bot/logo1.png" draggable="false"></label>
-      <label @click="distance = 200"><img alt="Metrum 2" src="@/assets/bot/logo2.png" draggable="false"></label>
-      <label @click="distance = 300"><img alt="Metrum 3" src="@/assets/bot/logo3.png" draggable="false"></label>
+      <label @click="distance = 100" tabindex="1"><img alt="Metrum 1" src="@/assets/bot/logo1.png" draggable="false"></label>
+      <label @click="distance = 200" tabindex="2"><img alt="Metrum 2" src="@/assets/bot/logo2.png" draggable="false"></label>
+      <label @click="distance = 300" tabindex="3"><img alt="Metrum 3" src="@/assets/bot/logo3.png" draggable="false"></label>
 
     </div>
   </div>
