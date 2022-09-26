@@ -3,7 +3,7 @@
     <div class="title">
       <h1>Nazywam się Jakub&nbsp;Kłało!</h1>
       <p>
-        Jestem 20-letnim studentem Inżynierii Multimediów. Już od ponad dwóch
+        Jestem 20-letnim studentem Inżynierii Multimediów. Już od trzech
         lat tworzę różne boty Discord czy strony internetowe.<br />Jest to
         nie&nbsp;tylko moja wielka pasja, ale też coś, z&nbsp;czym planuję
         wiązać swoją przyszłość. Jeśli chcesz się dowiedzieć o&nbsp;mnie więcej,
