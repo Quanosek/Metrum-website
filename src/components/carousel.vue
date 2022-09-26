@@ -1,68 +1,75 @@
 <template>
   <div>
     <div class="slider">
-
       <div class="slides" :style="{ right: distance + 'vw' }">
-
         <div class="slide" id="welcome">
           <h1>Najlepszy bot Metrum!</h1>
-          <p>Bot będący najlepszą, darmową alternatywą dla popularnych botów muzycznych Discord, oferujący niezwykle
-            dużo
-            funkcji, w&nbsp;tym <b>możliwość odtwarzania, nie tylko dowolnych tytułów, ale również linków YouTube,
-              Spotify
-              czy
-              SoundCloud</b> zawierających jeden utwór lub całą playlistę! Nie czekaj, wypróbuj już&nbsp;teraz!
+          <p>
+            Bot będący najlepszą, darmową alternatywą dla popularnych botów
+            muzycznych Discord, oferujący niezwykle dużo funkcji, w&nbsp;tym
+            <b>możliwość odtwarzania, nie tylko dowolnych tytułów, ale również
+              linków YouTube, Spotify czy SoundCloud</b>
+            zawierających jeden utwór lub całą playlistę! Nie czekaj, wypróbuj
+            już&nbsp;teraz!
           </p>
           <h2>Możesz wybierać spośród 3&nbsp;wersji!</h2>
         </div>
 
         <div class="slide">
           <h1>Metrum</h1>
-          <p>Flagowy bot muzyczny, zawierający <b>wszystkie sprawdzone funkcje</b>, nigdy nie&nbsp;zawodzi!</p>
+          <p>
+            Flagowy bot muzyczny, zawierający
+            <b>wszystkie sprawdzone funkcje</b>, nigdy nie&nbsp;zawodzi!
+          </p>
           <div class="invite button secondary">
-            <router-link :to="{ path: '/invite'}" target="_blank" tabindex="-1">
-              Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
+            <router-link :to="{ path: '/invite' }" target="_blank" tabindex="-1">
+              Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
             </router-link>
           </div>
         </div>
 
         <div class="slide">
           <h1>Metrum 2</h1>
-          <p>Jeśli główny bot jest zbyt obciążony, albo chcesz być w&nbsp;stanie odtwarzać <b>dwie piosenki
-              jednocześnie</b> ten bot jest idealnym rozwiązaniem!
+          <p>
+            Jeśli główny bot jest zbyt obciążony, albo chcesz być w&nbsp;stanie
+            odtwarzać <b>dwie piosenki jednocześnie</b> ten bot jest idealnym
+            rozwiązaniem!
           </p>
           <div class="invite button secondary">
-            <router-link :to="{ path: '/invite2'}" target="_blank" tabindex="-1">
-              Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
+            <router-link :to="{ path: '/invite2' }" target="_blank" tabindex="-1">
+              Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
             </router-link>
           </div>
         </div>
 
         <div class="slide">
           <h1>Metrum 3</h1>
-          <p>Najmniej oblegana wersja bota, dodatkowo zawsze <b>jako pierwszy otrzymuje najnowsze funkcje</b>, ale
-            przez&nbsp;to potrafi być niestabilny.
+          <p>
+            Najmniej oblegana wersja bota, dodatkowo zawsze
+            <b>jako pierwszy otrzymuje najnowsze funkcje</b>, ale przez&nbsp;to
+            potrafi być niestabilny.
           </p>
           <div class="invite button secondary">
-            <router-link :to="{ path: '/invite3'}" target="_blank" tabindex="-1">
-              Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false">
+            <router-link :to="{ path: '/invite3' }" target="_blank" tabindex="-1">
+              Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
             </router-link>
           </div>
         </div>
-
       </div>
 
-      <label @click="distance = 100" tabindex="1"><img alt="Metrum 1" src="@/assets/bot/logo1.png" draggable="false"></label>
-      <label @click="distance = 200" tabindex="2"><img alt="Metrum 2" src="@/assets/bot/logo2.png" draggable="false"></label>
-      <label @click="distance = 300" tabindex="3"><img alt="Metrum 3" src="@/assets/bot/logo3.png" draggable="false"></label>
-
+      <label @click="distance = 100" tabindex="1"><img alt="Metrum 1" src="@/assets/bot/logo1.png"
+          draggable="false" /></label>
+      <label @click="distance = 200" tabindex="2"><img alt="Metrum 2" src="@/assets/bot/logo2.png"
+          draggable="false" /></label>
+      <label @click="distance = 300" tabindex="3"><img alt="Metrum 3" src="@/assets/bot/logo3.png"
+          draggable="false" /></label>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ComponentCarousel',
+  name: "ComponentCarousel",
   data() {
     return {
       distance: 0,
@@ -102,7 +109,7 @@ p {
   text-align: center;
   position: relative;
 
-  transition: .3s, filter 1.5s ease-in-out;
+  transition: 0.3s, filter 1.5s ease-in-out;
 
   div {
     display: flex;
@@ -148,7 +155,7 @@ p {
 
 .button {
   margin: 2rem 0 5rem;
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   width: 220px !important;
 
   font-size: 1.4rem;
@@ -160,7 +167,7 @@ p {
   a {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   img {
@@ -171,7 +178,6 @@ p {
 }
 
 label {
-
   user-select: none;
 
   margin: 0 2rem;
@@ -179,7 +185,7 @@ label {
 
   img {
     width: 8rem;
-    transition: .2s;
+    transition: 0.2s;
     border-radius: 10px;
   }
 
@@ -225,8 +231,7 @@ label {
   }
 
   label {
-
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
 
     img {
       width: 5.5rem;

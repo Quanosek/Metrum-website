@@ -1,18 +1,18 @@
 <template>
-  <Nav />
+  <VueNav />
   <router-view />
-  <Footer />
+  <VueFooter />
 </template>
 
 <script>
-import Nav from "./components/nav.vue";
-import Footer from "./components/footer.vue";
+import VueNav from "./components/nav.vue";
+import VueFooter from "./components/footer.vue";
 
 export default {
   name: "App",
   components: {
-    Nav,
-    Footer,
+    VueNav,
+    VueFooter,
   },
 };
 </script>
@@ -21,7 +21,6 @@ export default {
 /* <--- COLORS ---> */
 
 :root {
-
   /* default colors */
   --primary: #36393f;
   --secondary: #2f3136;
@@ -33,12 +32,12 @@ export default {
 
 .button {
   padding: 8px 10px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   border-radius: 3px;
 
   user-select: none;
 
-  transition: .15s, filter 1.5s ease-in-out;
+  transition: 0.15s, filter 1.5s ease-in-out;
   cursor: pointer;
 
   &.primary {
@@ -70,7 +69,6 @@ export default {
       }
     }
   }
-
 }
 
 /* <--- RESET STYLE ---> */

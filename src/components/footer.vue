@@ -1,58 +1,59 @@
 <template>
-    <footer>
-
-        <p>Strona stworzona przez: <a href="https://github.com/Quanosek" draggable="false">Quanosek</a> & <a
-                href="https://github.com/Karroteu" draggable="false">Karroteu</a></p>
-        <p class="copyrights">Wszelkie prawa zastrzeżone ©&nbsp;2022</p>
-
-    </footer>
+  <footer>
+    <p>
+      Strona stworzona przez:
+      <a href="https://github.com/Quanosek" draggable="false">Quanosek</a> &
+      <a href="https://github.com/Karroteu" draggable="false">Karroteu</a>
+    </p>
+    <p class="copyrights">Wszelkie prawa zastrzeżone ©&nbsp;2022</p>
+  </footer>
 </template>
 
 <script>
 export default {
-    name: 'componentFooter',
+  name: "componentFooter",
 };
 </script>
 
 <style lang="scss" scoped>
 footer {
-    z-index: 10;
-    padding: 0 3%;
-    height: 70px;
-    width: 94%;
+  z-index: 10;
+  padding: 0 3%;
+  height: 70px;
+  width: 94%;
 
-    background-color: var(--secondary);
-    display: flex;
+  background-color: var(--secondary);
+  display: flex;
 
-    justify-content: space-between;
-    align-items: center;
-    font-size: .9rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .copyrights {
-    font-size: .8rem;
-    opacity: .8;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-    footer {
-        height: 80px;
+  footer {
+    height: 80px;
 
-        justify-content: center;
-        flex-direction: column;
-        font-size: .8rem;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.8rem;
 
-        p {
-            margin: 6px 0;
-        }
+    p {
+      margin: 6px 0;
     }
+  }
 
-    .copyrights {
-        font-size: .7rem;
-    }
+  .copyrights {
+    font-size: 0.7rem;
+  }
 }
 </style>
