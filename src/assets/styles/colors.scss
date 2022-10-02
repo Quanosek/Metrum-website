@@ -1,0 +1,46 @@
+:root {
+  // Static Colors
+  --blurple: #5865f2;
+  --green: #57f287;
+  --yellow: #fee75c;
+  --fuchsia: #eb459e;
+  --red: #ed4245;
+  --white: #ffffff;
+  --black: #000000;
+
+  // Buttons
+  --primary: var(--blurple);
+  --primary-hover: #4752c4;
+  --secondary: #4f545c;
+  --secondary-hover: #686d73;
+  --success: #2d7d46;
+  --success-hover: #215b32;
+  --danger: #d83c3e;
+  --danger-hover: #a12d2f;
+
+  // Discord App
+  --app-1: #40444b;
+  --app-2: #36393f;
+  --app-3: #2f3136;
+  --app-4: #292b2f;
+  --app-5: #202225;
+  --app-6: #18191c;
+
+  // Developers Page
+  --dev-1: #303339;
+  --dev-2: #282a2f;
+  --dev-3: #131517;
+
+  // Discord Website
+  --web-1: #2c2f33;
+  --web-2: #23272a;
+
+  // My colors
+  --my-1: #32353b;
+
+  // Fonts
+  --font-color-1: #d2ddde;
+  --font-color-2: #cdcecf;
+  --font-color-3: #b9bbbe;
+  --font-color-4: #96989d;
+}

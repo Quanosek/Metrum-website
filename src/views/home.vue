@@ -1,10 +1,14 @@
+<script setup>
+import MySlider from "@/components/slider.vue";
+</script>
+
 <template>
   <main>
-    <Carousel />
+    <MySlider />
 
     <div class="info">
       <div>
-        <h1>Używaj jak chcesz!</h1>
+        <h2>Używaj jak chcesz!</h2>
         <p>
           Możesz bez problemu korzystać z&nbsp;własnego prefixu, jak
           i&nbsp;ukośnika!
@@ -12,7 +16,7 @@
       </div>
 
       <div>
-        <h1>Pełna dowolność!</h1>
+        <h2>Pełna dowolność!</h2>
         <p>
           Bot umożliwia odtwarzanie po wyszukanym tytule, jak i&nbsp;linkach.
           Możesz tworzyć własne kolejki, lub włączyć auto-odtwarzanie!
@@ -26,7 +30,7 @@
       </div>
 
       <div>
-        <h1>Mnogość funkcji!</h1>
+        <h2>Mnogość funkcji!</h2>
         <p>
           Do dyspozycji jest m.in. zapętlanie, system pomijania
           z&nbsp;głosowaniem, odtwarzanie transmisji live, pauzowanie,
@@ -35,7 +39,7 @@
       </div>
 
       <div>
-        <h1>Szybki i&nbsp;zawsze dostępny</h1>
+        <h2>Szybki i&nbsp;zawsze dostępny</h2>
         <p>
           Zapewnia zawsze błyskawiczną odpowiedź na komendy, auto-dołączanie do
           kanałów głosowych i&nbsp;z&nbsp;nich wychodzenie!
@@ -48,20 +52,10 @@
   </main>
 </template>
 
-<script>
-import Carousel from "../components/carousel.vue";
-
-export default {
-  name: "viewHome",
-  components: {
-    Carousel,
-  },
-};
-</script>
-
 <style lang="scss" scoped>
 .info {
   margin-top: 3rem;
+  padding: 0 5%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -69,6 +63,10 @@ export default {
 
   div {
     text-align: center;
+
+    h2 {
+      font-size: 2rem;
+    }
   }
 }
 

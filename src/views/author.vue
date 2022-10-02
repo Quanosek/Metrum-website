@@ -1,16 +1,33 @@
+<script setup>
+import Bot from "@/components/bot.vue";
+</script>
+
 <template>
   <main>
-    <div class="title">
-      <h1>Nazywam się Jakub&nbsp;Kłało!</h1>
+    <div class="start">
+      <h1>Nazywam się Jakub&nbsp;Kłało</h1>
       <p>
-        Jestem 20-letnim studentem Inżynierii Multimediów. Już od trzech
-        lat tworzę różne boty Discord czy strony internetowe.<br />Jest to
-        nie&nbsp;tylko moja wielka pasja, ale też coś, z&nbsp;czym planuję
-        wiązać swoją przyszłość. Jeśli chcesz się dowiedzieć o&nbsp;mnie więcej,
-        sprawdź linki poniżej!
+        Jestem <b>20-letnim studentem Inżynierii Multimediów</b>.
+        Już&nbsp;od&nbsp;<b>trzech lat</b> hobbistyczne zajmuję&nbsp;się
+        programowaniem w&nbsp;języku <b>JavaScript</b> oraz tworzeniem różnych
+        projektów z&nbsp;użyciem HTML, CSS i&nbsp;frameworków. Jest&nbsp;to
+        nie&nbsp;tylko moja wielka pasja, ale też&nbsp;coś, z&nbsp;czym planuję
+        <b>wiązać swoją przyszłość</b>!
       </p>
+      <p>
+        Jednym z&nbsp;takich projektów jest właśnie <b>Metrum</b>, który stale
+        staram&nbsp;się ulepszać i&nbsp;rozwijać, aby&nbsp;był niezastąpiony
+        przy wspólnym siedzeniu na&nbsp;kanałach głosowych w&nbsp;gronie
+        znajomych.
+      </p>
+      <p>
+        Jeśli&nbsp;chcesz dowiedzieć&nbsp;się o&nbsp;mnie nieco&nbsp;więcej,
+        wybierz linki poniżej!
+      </p>
+    </div>
 
-      <div class="photos">
+    <div>
+      <div class="photo">
         <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało" draggable="false" />
         <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek" draggable="false" />
       </div>
@@ -31,88 +48,52 @@
       </div>
 
       <p class="note">
-        kliknij w ikonę, aby przenieść się do odpowiedniej strony
+        kliknij w&nbsp;ikonę, aby przenieść&nbsp;się do&nbsp;odpowiedniej strony
       </p>
     </div>
 
     <div class="more">
-      <h2>
-        Mam jeszcze kilka innych botów, nie&nbsp;zapomnij ich przetestować!
-      </h2>
+      <h2>Mam jeszcze kilka innych botów, przetestuj je na swoim serwerze!</h2>
+
       <div class="bots">
-        <a href="http://dimension.klalo.pl/" target="_blank">
-          <div>
-            <img src="@/assets/author/dimension.png" alt="dimension" draggable="false" />
-            <p>Dimension</p>
-          </div>
-        </a>
-        <a href="http://discord.klalo.pl/mc_connect" target="_blank">
-          <div>
-            <img src="@/assets/author/mc_connect.png" alt="mc_connect" draggable="false" />
-            <p>MC_Connect</p>
-          </div>
-        </a>
+        <Bot name="Dimension" img="src/assets/author/dimension.png" link="http://dimension.klalo.pl/" />
+        <Bot name="MC_Connect" img="src/assets/author/mc_connect.png" link="http://discord.klalo.pl/mc_connect/" />
       </div>
     </div>
   </main>
 </template>
 
-<script>
-export default {
-  name: "viewAuthor",
-};
-</script>
-
 <style lang="scss" scoped>
-.title {
-  margin-top: 2rem;
-  text-align: center;
-  gap: 2rem;
-  font-size: 110%;
-
-  h1 {
-    font-size: 2.2rem;
-  }
-}
-
-.photos {
-  margin-top: 2rem;
-  height: 220px;
-
+.photo {
+  margin-top: -1rem;
+  height: 14rem;
   display: flex;
   justify-content: center;
-
   user-select: none;
 
   img {
-    height: 200px;
-    width: auto;
-
-    border-radius: 15px;
+    height: 13rem;
+    border-radius: var(--roundedBig);
     position: absolute;
   }
-}
 
-#quanosek {
-  opacity: 0;
-  transition: 0.6s, filter 1.5s ease-in-out;
+  #quanosek {
+    opacity: 0;
+    transition: var(--transitionSmooth);
 
-  &:hover {
-    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
 hr {
   margin-bottom: 1.5rem;
-  border: none;
-  background-color: var(--text1);
   height: 1px;
-  width: 400px;
-  border-radius: 5px;
-
-  @media (max-width: 768px) {
-    width: 300px;
-  }
+  width: 24rem;
+  border: none;
+  border-radius: var(--roundedMedium);
+  background-color: var(--font-color-3);
 }
 
 .links {
@@ -120,36 +101,38 @@ hr {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-
   user-select: none;
 
   img {
     filter: invert(1);
-    opacity: 80%;
-    transition: 0.2s;
-    height: 26px;
+    opacity: 0.75;
+    height: 1.75rem;
     width: auto;
+    transition: var(--transitionFast);
 
     @media (min-width: 1025px) {
       &:hover {
-        opacity: 100%;
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      & {
+        height: 1.5rem;
       }
     }
   }
 }
 
 .note {
-  margin: 1rem 0 0 0;
-  opacity: 65%;
-  font-size: 70%;
-
-  @media (max-width: 768px) {
-    font-size: 55%;
-  }
+  margin-top: 1rem;
+  opacity: 0.65;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .more {
-  margin-top: 2rem;
+  margin: 0 3%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -157,64 +140,26 @@ hr {
 }
 
 .bots {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem 1rem;
-
   user-select: none;
+}
 
-  div {
-    height: 10rem;
-    width: 8rem;
-    background-color: #2f3136;
-    padding: 0.6rem 0.6rem;
-    border-radius: 8px;
-    transition: 0.15s;
 
-    p {
-      margin-top: 0.5rem;
-      color: var(--text2);
-      font-size: 90%;
-      font-weight: 600;
-      transition: 0.15s;
-    }
-
-    @media (min-width: 1025px) {
-      &:hover {
-        background-color: #292b2f;
-        box-shadow: 0 0.2rem 1rem 0rem rgba($color: #000000, $alpha: 0.2);
-        transform: translateY(-5%);
-
-        p {
-          color: #ffffff;
-        }
-      }
-    }
+@media (max-width: 768px) {
+  hr {
+    width: 20rem;
   }
 
-  img {
-    height: 8rem;
-    width: auto;
-    border-radius: 10px;
+  .note {
+    font-size: 0.6rem;
   }
 
-  @media (max-width: 768px) {
+  .bots {
     gap: 1rem;
-
-    div {
-      height: 8rem;
-      width: 6rem;
-
-      p {
-        font-size: 85%;
-      }
-    }
-
-    img {
-      height: 6rem;
-    }
   }
 }
 </style>
