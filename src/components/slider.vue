@@ -66,13 +66,13 @@ function changeSlide(value) {
     </div>
 
     <div class="select">
-      <abbr title="Metrum">
+      <abbr title="Metrum" tabindex="0">
         <img src="@/assets/bot/metrum1.png" alt="Metrum" @click="changeSlide(1)" id="metrum1" draggable="false" />
       </abbr>
-      <abbr title="Metrum 2">
+      <abbr title="Metrum 2" tabindex="0">
         <img src="@/assets/bot/metrum2.png" alt="Metrum 2" @click="changeSlide(2)" id="metrum2" draggable="false" />
       </abbr>
-      <abbr title="Metrum 3">
+      <abbr title="Metrum 3" tabindex="0">
         <img src="@/assets/bot/metrum3.png" alt="Metrum 3" @click="changeSlide(3)" id="metrum3" draggable="false" />
       </abbr>
     </div>
@@ -92,6 +92,7 @@ function changeSlide(value) {
 
   h1 {
     font-family: "Ginto Nord Medium";
+    ;
     font-size: 3.6rem;
   }
 
@@ -102,6 +103,7 @@ function changeSlide(value) {
 
     b {
       font-family: "Whitney-Semibold";
+      ;
     }
   }
 }

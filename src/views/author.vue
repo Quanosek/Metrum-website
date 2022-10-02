@@ -1,5 +1,7 @@
 <script setup>
 import Bot from "@/components/bot.vue";
+import dimension from '@/assets/author/dimension.png'
+import mc_connect from '@/assets/author/mc_connect.png'
 </script>
 
 <template>
@@ -56,8 +58,8 @@ import Bot from "@/components/bot.vue";
       <h2>Mam jeszcze kilka innych botów, przetestuj je na swoim serwerze!</h2>
 
       <div class="bots">
-        <Bot name="Dimension" img="src/assets/author/dimension.png" link="http://dimension.klalo.pl/" />
-        <Bot name="MC_Connect" img="src/assets/author/mc_connect.png" link="http://discord.klalo.pl/mc_connect/" />
+        <Bot name="Dimension" :img=dimension link="http://dimension.klalo.pl/" />
+        <Bot name="MC_Connect" :img=mc_connect link="http://discord.klalo.pl/mc_connect/" />
       </div>
     </div>
   </main>

@@ -196,6 +196,7 @@ import Command from "@/components/command.vue";
 
   h2 {
     font-family: "Ginto Nord Medium";
+    ;
     padding: 1rem 0 1rem 6rem;
     font-size: 1.6rem;
     background-color: var(--app-3);
