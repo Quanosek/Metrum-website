@@ -1,19 +1,20 @@
-<script setup>
-import { ref } from "vue";
-import { RouterLink, RouterView } from "vue-router";
+<script setup lang="ts">
+import { ref } from 'vue';
+import { RouterLink, RouterView } from 'vue-router'
 
 const active = ref(false);
 function isActive() {
   active.value = !active.value;
 
-  if (active.value === true && window.innerWidth <= 768) {
-    const xPos = window.scrollX;
-    const yPos = window.scrollY;
-    window.onscroll = () => {
-      window.scroll(xPos, yPos);
-    };
-  } else window.onscroll = "";
+  // if (active.value === true && window.innerWidth <= 768) {
+  //   const xPos = window.scrollX;
+  //   const yPos = window.scrollY;
+  //   window.onscroll = () => {
+  //     window.scroll(xPos, yPos);
+  //   };
+  // } else window.onscroll = "";
 }
+
 </script>
 
 <template>
@@ -37,10 +38,10 @@ function isActive() {
         <RouterLink to="/author" class="button success">
           O&nbsp;autorze
         </RouterLink>
-        <RouterLink to="/opinion" target="_blank" class="button link">
+        <a href="https://top.gg/bot/890577647980146688" target="_blank" class="button link">
           Zostaw&nbsp;opinię
           <img src="@/assets/icons/link.svg" alt="link" draggable="false" />
-        </RouterLink>
+        </a>
       </div>
 
       <div class="hamburger" @click="isActive">
@@ -49,7 +50,9 @@ function isActive() {
     </div>
   </header>
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 
   <footer>
     <div class="credits">

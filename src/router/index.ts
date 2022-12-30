@@ -1,6 +1,9 @@
+// import
 import { createRouter, createWebHistory } from "vue-router";
 
+// define router
 const router = createRouter({
+  // enable browser history
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     // error
@@ -33,12 +36,6 @@ const router = createRouter({
         window.location.href = "https://top.gg/bot/890577647980146688";
       },
     },
-    // {
-    //   path: "/donate",
-    //   component: () => {
-    //     window.location.href = "";
-    //   },
-    // },
     // invite links
     {
       path: "/invite",
@@ -62,7 +59,7 @@ const router = createRouter({
       },
     },
   ],
-  // other params
+  // smooth scrolling
   scrollBehavior(to) {
     if (to.hash) {
       return { el: to.hash, top: 80, behavior: "smooth" };
@@ -72,10 +69,12 @@ const router = createRouter({
   },
 });
 
+// meta title
 const DEFAULT_TITLE = "Metrum - Najlepszy Polski Bot Muzyczny Discord";
 router.beforeEach((to) => {
   if (to.meta.title) document.title = to.meta.title + " | " + DEFAULT_TITLE;
   else document.title = DEFAULT_TITLE;
 });
 
+// export
 export default router;

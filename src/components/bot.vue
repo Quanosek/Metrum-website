@@ -1,5 +1,5 @@
-<script setup>
-const element = defineProps({
+<script setup lang="ts">
+defineProps({
   name: {
     type: String,
     required: true,

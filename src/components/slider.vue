@@ -1,9 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
 
 const distance = ref(0);
-function changeSlide(value) {
+function changeSlide(value: number) {
   distance.value = value * 100;
 }
 </script>
@@ -33,9 +32,10 @@ function changeSlide(value) {
           <b>Dodaj&nbsp;go na&nbsp;swój serwer</b> i&nbsp;ciesz&nbsp;się muzyką
           na&nbsp;swoich kanałach głosowych!
         </p>
-        <RouterLink to="/invite" target="_blank" class="invite button secondary" tabindex="-1">
+        <a href="https://discord.com/api/oauth2/authorize?client_id=890577647980146688&permissions=414501432640&scope=bot%20applications.commands"
+          target="_blank" class="invite button secondary" tabindex="-1">
           Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
-        </RouterLink>
+        </a>
       </div>
 
       <div class="slide">
@@ -46,9 +46,10 @@ function changeSlide(value) {
           odtwarzać muzykę na&nbsp;<b>dwóch różnych kanałach głosowych</b>,
           ten&nbsp;bot jest&nbsp;<b>idealnym</b> rozwiązaniem!
         </p>
-        <RouterLink to="/invite2" target="_blank" class="invite button secondary" tabindex="-1">
+        <a href="https://discord.com/api/oauth2/authorize?client_id=901543092547637289&permissions=414501432640&scope=bot%20applications.commands"
+          target="_blank" class="invite button secondary" tabindex="-1">
           Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
-        </RouterLink>
+        </a>
       </div>
 
       <div class="slide">
@@ -59,9 +60,10 @@ function changeSlide(value) {
           że&nbsp;potrzebujesz ich aż&nbsp;tyle na&nbsp;swoim serwerze? Chociaż sumie,
           to&nbsp;<b>czemu&nbsp;nie...</b>&nbsp;&nbsp;:)
         </p>
-        <RouterLink to="/invite2" target="_blank" class="invite button secondary" tabindex="-1">
+        <a href="https://discord.com/api/oauth2/authorize?client_id=901543130468323399&permissions=414501432640&scope=bot%20applications.commands"
+          target="_blank" class="invite button secondary" tabindex="-1">
           Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
-        </RouterLink>
+        </a>
       </div>
     </div>
 
@@ -225,7 +227,7 @@ function changeSlide(value) {
   #welcome {
     margin-top: 2rem;
     gap: 2rem;
-    
+
     h2 {
       margin-bottom: 0.5rem;
     }

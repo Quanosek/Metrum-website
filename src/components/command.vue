@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { reactive } from "vue";
 
 const element = defineProps({
@@ -51,7 +51,7 @@ function copyButton() {
 
         <div class="copyHandler">
           <button title="Kliknij, aby skopiować!" @click="copyButton">
-            <span :style="copied" class="copied">Skopiowano komendę!</span>
+            <!-- <span :style?="copied" class="copied">Skopiowano komendę!</span> -->
             <img src="@/assets/icons/copy.svg" alt="copy" draggable="false" />
           </button>
         </div>

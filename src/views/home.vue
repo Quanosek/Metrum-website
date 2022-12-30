@@ -1,55 +1,53 @@
-<script setup>
+<script setup lang="ts">
 import MySlider from "@/components/slider.vue";
 </script>
 
 <template>
-  <main>
-    <MySlider />
+  <MySlider />
 
-    <div class="info">
-      <div>
-        <h2>Używaj jak chcesz!</h2>
-        <p>
-          Możesz bez problemu korzystać z&nbsp;własnego prefixu, jak
-          i&nbsp;ukośnika!
-        </p>
-      </div>
-
-      <div>
-        <h2>Pełna dowolność!</h2>
-        <p>
-          Bot umożliwia odtwarzanie po wyszukanym tytule, jak i&nbsp;linkach.
-          Możesz tworzyć własne kolejki, lub włączyć auto-odtwarzanie!
-        </p>
-      </div>
-
-      <div class="media">
-        <img src="@/assets/media/YouTube.svg" alt="YouTube" />
-        <img src="@/assets/media/Spotify.svg" alt="Spotify" />
-        <img src="@/assets/media/SoundCloud.svg" alt="SoundCloud" />
-      </div>
-
-      <div>
-        <h2>Mnogość funkcji!</h2>
-        <p>
-          Do dyspozycji jest m.in. zapętlanie, system pomijania
-          z&nbsp;głosowaniem, odtwarzanie transmisji live, pauzowanie,
-          przewijanie i&nbsp;wiele więcej.
-        </p>
-      </div>
-
-      <div>
-        <h2>Szybki i&nbsp;zawsze dostępny</h2>
-        <p>
-          Zapewnia zawsze błyskawiczną odpowiedź na komendy, auto-dołączanie do
-          kanałów głosowych i&nbsp;z&nbsp;nich wychodzenie!
-          <br />
-          Kiedy akurat jest niedostępny, znaczy, że&nbsp;wgrywane są
-          aktualizacje.
-        </p>
-      </div>
+  <div class="info">
+    <div>
+      <h2>Używaj jak chcesz!</h2>
+      <p>
+        Możesz bez problemu korzystać z&nbsp;własnego prefixu, jak
+        i&nbsp;ukośnika!
+      </p>
     </div>
-  </main>
+
+    <div>
+      <h2>Pełna dowolność!</h2>
+      <p>
+        Bot umożliwia odtwarzanie po wyszukanym tytule, jak i&nbsp;linkach.
+        Możesz tworzyć własne kolejki, lub włączyć auto-odtwarzanie!
+      </p>
+    </div>
+
+    <div class="media">
+      <img src="@/assets/media/YouTube.svg" alt="YouTube" />
+      <img src="@/assets/media/Spotify.svg" alt="Spotify" />
+      <img src="@/assets/media/SoundCloud.svg" alt="SoundCloud" />
+    </div>
+
+    <div>
+      <h2>Mnogość funkcji!</h2>
+      <p>
+        Do dyspozycji jest m.in. zapętlanie, system pomijania
+        z&nbsp;głosowaniem, odtwarzanie transmisji live, pauzowanie,
+        przewijanie i&nbsp;wiele więcej.
+      </p>
+    </div>
+
+    <div>
+      <h2>Szybki i&nbsp;zawsze dostępny</h2>
+      <p>
+        Zapewnia zawsze błyskawiczną odpowiedź na komendy, auto-dołączanie do
+        kanałów głosowych i&nbsp;z&nbsp;nich wychodzenie!
+        <br />
+        Kiedy akurat jest niedostępny, znaczy, że&nbsp;wgrywane są
+        aktualizacje.
+      </p>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

@@ -1,68 +1,66 @@
-<script setup>
+<script setup lang="ts">
 import Bot from "@/components/bot.vue";
 import dimension from '@/assets/author/dimension.png'
 import mc_connect from '@/assets/author/mc_connect.png'
 </script>
 
 <template>
-  <main>
-    <div class="start">
-      <h1>Nazywam się Jakub&nbsp;Kłało</h1>
-      <p>
-        Jestem <b>20-letnim studentem Inżynierii Multimediów</b>.
-        Już&nbsp;od&nbsp;<b>trzech lat</b> hobbistyczne zajmuję&nbsp;się
-        programowaniem w&nbsp;języku <b>JavaScript</b> oraz tworzeniem różnych
-        projektów z&nbsp;użyciem HTML, CSS i&nbsp;frameworków. Jest&nbsp;to
-        nie&nbsp;tylko moja wielka pasja, ale też&nbsp;coś, z&nbsp;czym planuję
-        <b>wiązać swoją przyszłość</b>!
-      </p>
-      <p>
-        Jednym z&nbsp;takich projektów jest właśnie <b>Metrum</b>, który stale
-        staram&nbsp;się ulepszać i&nbsp;rozwijać, aby&nbsp;był niezastąpiony
-        przy wspólnym siedzeniu na&nbsp;kanałach głosowych w&nbsp;gronie
-        znajomych.
-      </p>
-      <p>
-        Jeśli&nbsp;chcesz dowiedzieć&nbsp;się o&nbsp;mnie nieco&nbsp;więcej,
-        wybierz linki poniżej!
-      </p>
+  <div class="start">
+    <h1>Nazywam się Jakub&nbsp;Kłało</h1>
+    <p>
+      Jestem <b>20-letnim studentem Inżynierii Multimediów</b>.
+      Już&nbsp;od&nbsp;<b>trzech lat</b> hobbistyczne zajmuję&nbsp;się
+      programowaniem w&nbsp;języku <b>JavaScript</b> oraz tworzeniem różnych
+      projektów z&nbsp;użyciem HTML, CSS i&nbsp;frameworków. Jest&nbsp;to
+      nie&nbsp;tylko moja wielka pasja, ale też&nbsp;coś, z&nbsp;czym planuję
+      <b>wiązać swoją przyszłość</b>!
+    </p>
+    <p>
+      Jednym z&nbsp;takich projektów jest właśnie <b>Metrum</b>, który stale
+      staram&nbsp;się ulepszać i&nbsp;rozwijać, aby&nbsp;był niezastąpiony
+      przy wspólnym siedzeniu na&nbsp;kanałach głosowych w&nbsp;gronie
+      znajomych.
+    </p>
+    <p>
+      Jeśli&nbsp;chcesz dowiedzieć&nbsp;się o&nbsp;mnie nieco&nbsp;więcej,
+      wybierz linki poniżej!
+    </p>
+  </div>
+
+  <div>
+    <div class="photo">
+      <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało" draggable="false" />
+      <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek" draggable="false" />
     </div>
 
-    <div>
-      <div class="photo">
-        <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało" draggable="false" />
-        <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek" draggable="false" />
-      </div>
+    <hr />
 
-      <hr />
-
-      <div class="links">
-        <a href="https://www.klalo.pl" target="_blank">
-          <img src="@/assets/icons/website.svg" alt="website" draggable="false" /></a>
-        <a href="https://klalo.pl/discord" target="_blank">
-          <img src="@/assets/icons/discord.svg" alt="discord" draggable="false" /></a>
-        <a href="https://klalo.pl/github" target="_blank">
-          <img src="@/assets/icons/github.svg" alt="github" draggable="false" /></a>
-        <a href="https://klalo.pl/facebook" target="_blank">
-          <img src="@/assets/icons/facebook.svg" alt="facebook" draggable="false" /></a>
-        <a href="https://klalo.pl/twitter" target="_blank">
-          <img src="@/assets/icons/twitter.svg" alt="twitter" draggable="false" /></a>
-      </div>
-
-      <p class="note">
-        kliknij w&nbsp;ikonę, aby przenieść&nbsp;się do&nbsp;odpowiedniej strony
-      </p>
+    <div class="links">
+      <a href="https://www.klalo.pl" target="_blank">
+        <img src="@/assets/icons/website.svg" alt="website" draggable="false" /></a>
+      <a href="https://klalo.pl/discord" target="_blank">
+        <img src="@/assets/icons/discord.svg" alt="discord" draggable="false" /></a>
+      <a href="https://klalo.pl/github" target="_blank">
+        <img src="@/assets/icons/github.svg" alt="github" draggable="false" /></a>
+      <a href="https://klalo.pl/facebook" target="_blank">
+        <img src="@/assets/icons/facebook.svg" alt="facebook" draggable="false" /></a>
+      <a href="https://klalo.pl/twitter" target="_blank">
+        <img src="@/assets/icons/twitter.svg" alt="twitter" draggable="false" /></a>
     </div>
 
-    <div class="more">
-      <h2>Mam jeszcze kilka innych botów, przetestuj je na swoim serwerze!</h2>
+    <p class="note">
+      kliknij w&nbsp;ikonę, aby przenieść&nbsp;się do&nbsp;odpowiedniej strony
+    </p>
+  </div>
 
-      <div class="bots">
-        <Bot name="Dimension" :img=dimension link="http://dimension.klalo.pl/" />
-        <Bot name="MC_Connect" :img=mc_connect link="http://discord.klalo.pl/mc_connect/" />
-      </div>
+  <div class="more">
+    <h2>Mam jeszcze kilka innych botów, przetestuj je na swoim serwerze!</h2>
+
+    <div class="bots">
+      <Bot name="Dimension" :img=dimension link="http://dimension.klalo.pl/" />
+      <Bot name="MC_Connect" :img=mc_connect link="http://discord.klalo.pl/mc_connect/" />
     </div>
-  </main>
+  </div>
 </template>
 
 <style lang="scss" scoped>
