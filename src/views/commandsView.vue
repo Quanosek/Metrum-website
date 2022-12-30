@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import Command from "@/components/command.vue";
+import Command from "@/components/commandComponent.vue";
 </script>
 
 <template>

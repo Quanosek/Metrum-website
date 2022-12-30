@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MySlider from "@/components/slider.vue";
+import MySlider from "@/components/sliderComponent.vue";
 </script>
 
 <template>

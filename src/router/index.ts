@@ -10,25 +10,25 @@ const router = createRouter({
     {
       path: "/:pathMatch(.*)*",
       meta: { title: "Błąd Strony" },
-      component: () => import("../views/error.vue"),
+      component: () => import("../views/errorView.vue"),
     },
     // website
     {
       path: "/",
       name: "home",
-      component: () => import("../views/home.vue"),
+      component: () => import("../views/homeView.vue"),
     },
     {
       path: "/commands",
       name: "commands",
       meta: { title: "Lista Komend" },
-      component: () => import("../views/commands.vue"),
+      component: () => import("../views/commandsView.vue"),
     },
     {
       path: "/author",
       name: "author",
       meta: { title: "O Autorze" },
-      component: () => import("../views/author.vue"),
+      component: () => import("../views/authorView.vue"),
     },
     {
       path: "/opinion",

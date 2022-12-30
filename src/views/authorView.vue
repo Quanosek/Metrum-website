@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Bot from "@/components/bot.vue";
+import Bot from "@/components/botComponent.vue";
 import dimension from '@/assets/author/dimension.png'
 import mc_connect from '@/assets/author/mc_connect.png'
 </script>
