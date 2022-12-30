@@ -6,13 +6,13 @@ const active = ref(false);
 function isActive() {
   active.value = !active.value;
 
-  // if (active.value === true && window.innerWidth <= 768) {
-  //   const xPos = window.scrollX;
-  //   const yPos = window.scrollY;
-  //   window.onscroll = () => {
-  //     window.scroll(xPos, yPos);
-  //   };
-  // } else window.onscroll = "";
+  if (active.value === true && window.innerWidth <= 768) {
+    var xPos = window.scrollX;
+    var yPos = window.scrollY;
+    window.onscroll = () => { window.scrollTo(xPos, yPos) };
+  } else {
+    window.onscroll = () => { };
+  }
 }
 
 </script>
@@ -60,7 +60,8 @@ function isActive() {
       <a href="https://github.com/Quanosek" draggable="false">Quanoska</a>.
     </div>
     <div class="copyrights">
-      Wszelkie prawa zastrzeżone ©&nbsp;2022 | domena&nbsp;<a href="https://www.klalo.pl" target="_blank">klalo.pl</a>
+      Wszelkie prawa zastrzeżone ©&nbsp;2022-2023 | domena&nbsp;<a href="https://www.klalo.pl"
+        target="_blank">klalo.pl</a>
     </div>
   </footer>
 </template>

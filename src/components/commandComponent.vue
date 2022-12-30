@@ -1,28 +1,15 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 
-const element = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  aliases: {
-    type: String,
-  },
-  embed: {
-    type: String,
-  },
-});
+const element = defineProps<{
+  title: string
+  name: string
+  description: string
+  aliases?: string
+  embed?: string
+}>();
 
-const copied = reactive({
+const copied: any = reactive({
   visibility: "hidden",
   opacity: 0,
 });
@@ -33,7 +20,7 @@ function copyButton() {
   copied.visibility = "visible";
   copied.opacity = 1;
 
-  setTimeout(() => {
+  window.setTimeout(() => {
     copied.visibility = "hidden";
     copied.opacity = 0;
   }, 1000);
@@ -46,19 +33,19 @@ function copyButton() {
       <div class="title">
         <div class="name">
           <h2>{{ name }}</h2>
-          <p v-if="element.aliases">[ {{ aliases }} ]</p>
+          <p v-if="aliases">[ {{ aliases }} ]</p>
         </div>
 
         <div class="copyHandler">
           <button title="Kliknij, aby skopiować!" @click="copyButton">
-            <!-- <span :style?="copied" class="copied">Skopiowano komendę!</span> -->
+            <span :style="copied" class="copied">Skopiowano komendę!</span>
             <img src="@/assets/icons/copy.svg" alt="copy" draggable="false" />
           </button>
         </div>
       </div>
 
       <p class="description">{{ description }}</p>
-      <div v-if="element.embed" v-html="element.embed" class="embed"></div>
+      <div v-if="embed" v-html="embed" class="embed"></div>
     </div>
   </div>
 </template>
@@ -137,7 +124,7 @@ function copyButton() {
 }
 
 .copied {
-  z-index: 1;
+  z-index: 10;
   padding: 0.5rem 1.5rem;
   position: absolute;
   bottom: 125%;

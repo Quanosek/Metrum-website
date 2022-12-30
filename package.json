@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "sass": "^1.57.1",
-    "the-new-css-reset": "^1.8.2",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
