@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineProps<{
-  name: string
-  img: string
-  link: string
+  name: string;
+  img: string;
+  link: string;
 }>();
 </script>
 
@@ -13,7 +13,7 @@ defineProps<{
   </a>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .bot {
   height: 10rem;
   width: 8rem;

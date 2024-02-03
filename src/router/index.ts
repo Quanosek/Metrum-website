@@ -1,18 +1,15 @@
-// import
 import { createRouter, createWebHistory } from "vue-router";
 
-// define router
 const router = createRouter({
-  // enable browser history
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // error
+    // error page
     {
       path: "/:pathMatch(.*)*",
       meta: { title: "Błąd Strony" },
       component: () => import("../views/errorView.vue"),
     },
-    // website
+    // website views
     {
       path: "/",
       name: "home",
@@ -36,7 +33,7 @@ const router = createRouter({
         window.location.href = "https://top.gg/bot/890577647980146688";
       },
     },
-    // invite links
+    // invite links redirect
     {
       path: "/invite",
       component: () => {
@@ -59,7 +56,7 @@ const router = createRouter({
       },
     },
   ],
-  // smooth scrolling
+
   scrollBehavior(to) {
     if (to.hash) {
       return { el: to.hash, top: 80, behavior: "smooth" };
@@ -76,5 +73,4 @@ router.beforeEach((to) => {
   else document.title = DEFAULT_TITLE;
 });
 
-// export
 export default router;

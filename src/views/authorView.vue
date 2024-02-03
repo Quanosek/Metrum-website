@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Bot from "@/components/botComponent.vue";
-import dimension from '@/assets/author/dimension.png'
-import mc_connect from '@/assets/author/mc_connect.png'
+import dimension from "@/assets/author/dimension.png";
+import mc_connect from "@/assets/author/mc_connect.png";
 </script>
 
 <template>
@@ -17,9 +17,8 @@ import mc_connect from '@/assets/author/mc_connect.png'
     </p>
     <p>
       Jednym z&nbsp;takich projektów jest właśnie <b>Metrum</b>, który stale
-      staram&nbsp;się ulepszać i&nbsp;rozwijać, aby&nbsp;był niezastąpiony
-      przy wspólnym siedzeniu na&nbsp;kanałach głosowych w&nbsp;gronie
-      znajomych.
+      staram&nbsp;się ulepszać i&nbsp;rozwijać, aby&nbsp;był niezastąpiony przy
+      wspólnym siedzeniu na&nbsp;kanałach głosowych w&nbsp;gronie znajomych.
     </p>
     <p>
       Jeśli&nbsp;chcesz dowiedzieć&nbsp;się o&nbsp;mnie nieco&nbsp;więcej,
@@ -29,23 +28,38 @@ import mc_connect from '@/assets/author/mc_connect.png'
 
   <div>
     <div class="photo">
-      <img id="kubaklalo" src="@/assets/author/kubaklalo.png" alt="Jakub Kłało" draggable="false" />
-      <img id="quanosek" src="@/assets/author/quanosek.png" alt="@Quanosek" draggable="false" />
+      <img
+        id="kubaklalo"
+        src="@/assets/author/kubaklalo.png"
+        alt="Jakub Kłało"
+        draggable="false"
+      />
+      <img
+        id="quanosek"
+        src="@/assets/author/quanosek.png"
+        alt="@Quanosek"
+        draggable="false"
+      />
     </div>
 
     <hr />
 
     <div class="links">
       <a href="https://www.klalo.pl" target="_blank">
-        <img src="@/assets/icons/website.svg" alt="website" draggable="false" /></a>
+        <img src="@/assets/icons/website.svg" alt="website" draggable="false"
+      /></a>
       <a href="https://klalo.pl/discord" target="_blank">
-        <img src="@/assets/icons/discord.svg" alt="discord" draggable="false" /></a>
+        <img src="@/assets/icons/discord.svg" alt="discord" draggable="false"
+      /></a>
       <a href="https://klalo.pl/github" target="_blank">
-        <img src="@/assets/icons/github.svg" alt="github" draggable="false" /></a>
+        <img src="@/assets/icons/github.svg" alt="github" draggable="false"
+      /></a>
       <a href="https://klalo.pl/facebook" target="_blank">
-        <img src="@/assets/icons/facebook.svg" alt="facebook" draggable="false" /></a>
+        <img src="@/assets/icons/facebook.svg" alt="facebook" draggable="false"
+      /></a>
       <a href="https://klalo.pl/twitter" target="_blank">
-        <img src="@/assets/icons/twitter.svg" alt="twitter" draggable="false" /></a>
+        <img src="@/assets/icons/twitter.svg" alt="twitter" draggable="false"
+      /></a>
     </div>
 
     <p class="note">
@@ -57,13 +71,21 @@ import mc_connect from '@/assets/author/mc_connect.png'
     <h2>Mam jeszcze kilka innych botów, przetestuj je na swoim serwerze!</h2>
 
     <div class="bots">
-      <Bot name="Dimension" :img=dimension link="http://dimension.klalo.pl/" />
-      <Bot name="MC_Connect" :img=mc_connect link="http://discord.klalo.pl/mc_connect/" />
+      <Bot
+        name="Dimension"
+        :img="dimension"
+        link="http://dimension.klalo.pl/"
+      />
+      <Bot
+        name="MC_Connect"
+        :img="mc_connect"
+        link="http://discord.klalo.pl/mc_connect/"
+      />
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .photo {
   margin-top: -1rem;
   height: 14rem;
@@ -147,7 +169,6 @@ hr {
   gap: 2rem 1rem;
   user-select: none;
 }
-
 
 @media (max-width: 768px) {
   hr {

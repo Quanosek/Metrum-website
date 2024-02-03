@@ -1,3 +1,7 @@
+<script setup lang="ts">
+//
+</script>
+
 <template>
   <div class="start">
     <h1>Pojawił się błąd!</h1>
@@ -12,3 +16,7 @@
     </p>
   </div>
 </template>
+
+<style scoped lang="scss">
+//
+</style>

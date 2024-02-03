@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
 
 const active = ref(false);
 function isActive() {
@@ -9,12 +9,13 @@ function isActive() {
   if (active.value === true && window.innerWidth <= 768) {
     var xPos = window.scrollX;
     var yPos = window.scrollY;
-    window.onscroll = () => { window.scrollTo(xPos, yPos) };
+    window.onscroll = () => {
+      window.scrollTo(xPos, yPos);
+    };
   } else {
-    window.onscroll = () => { };
+    window.onscroll = () => {};
   }
 }
-
 </script>
 
 <template>
@@ -38,7 +39,11 @@ function isActive() {
         <RouterLink to="/author" class="button success">
           O&nbsp;autorze
         </RouterLink>
-        <a href="https://top.gg/bot/890577647980146688" target="_blank" class="button link">
+        <a
+          href="https://top.gg/bot/890577647980146688"
+          target="_blank"
+          class="button link"
+        >
           Zostaw&nbsp;opinię
           <img src="@/assets/icons/link.svg" alt="link" draggable="false" />
         </a>
@@ -60,13 +65,16 @@ function isActive() {
       <a href="https://github.com/Quanosek" draggable="false">Quanoska</a>.
     </div>
     <div class="copyrights">
-      Wszelkie prawa zastrzeżone ©&nbsp;2022-2023 | domena&nbsp;<a href="https://www.klalo.pl"
-        target="_blank">klalo.pl</a>
+      Wszelkie prawa zastrzeżone ©&nbsp;2022-2023 | domena&nbsp;<a
+        href="https://www.klalo.pl"
+        target="_blank"
+        >klalo.pl</a
+      >
     </div>
   </footer>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 header {
   z-index: 10;
   position: fixed;

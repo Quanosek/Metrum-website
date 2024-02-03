@@ -2,11 +2,11 @@
 import { reactive } from "vue";
 
 const element = defineProps<{
-  title: string
-  name: string
-  description: string
-  aliases?: string
-  embed?: string
+  title: string;
+  name: string;
+  description: string;
+  aliases?: string;
+  embed?: string;
 }>();
 
 const copied: any = reactive({
@@ -50,7 +50,7 @@ function copyButton() {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .commandHandler {
   padding: 1.4rem 5vw 0.5rem;
   width: 80vw;

@@ -32,9 +32,17 @@ function changeSlide(value: number) {
           <b>Dodaj&nbsp;go na&nbsp;swój serwer</b> i&nbsp;ciesz&nbsp;się muzyką
           na&nbsp;swoich kanałach głosowych!
         </p>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=890577647980146688&permissions=414501432640&scope=bot%20applications.commands"
-          target="_blank" class="invite button secondary" tabindex="-1">
-          Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
+        <a
+          href="https://discord.com/api/oauth2/authorize?client_id=890577647980146688&permissions=414501432640&scope=bot%20applications.commands"
+          target="_blank"
+          class="invite button secondary"
+          tabindex="-1"
+        >
+          Zaproś na serwer!<img
+            alt="link"
+            src="@/assets/icons/link.svg"
+            draggable="false"
+          />
         </a>
       </div>
 
@@ -46,9 +54,17 @@ function changeSlide(value: number) {
           odtwarzać muzykę na&nbsp;<b>dwóch różnych kanałach głosowych</b>,
           ten&nbsp;bot jest&nbsp;<b>idealnym</b> rozwiązaniem!
         </p>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=901543092547637289&permissions=414501432640&scope=bot%20applications.commands"
-          target="_blank" class="invite button secondary" tabindex="-1">
-          Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
+        <a
+          href="https://discord.com/api/oauth2/authorize?client_id=901543092547637289&permissions=414501432640&scope=bot%20applications.commands"
+          target="_blank"
+          class="invite button secondary"
+          tabindex="-1"
+        >
+          Zaproś na serwer!<img
+            alt="link"
+            src="@/assets/icons/link.svg"
+            draggable="false"
+          />
         </a>
       </div>
 
@@ -57,31 +73,57 @@ function changeSlide(value: number) {
         <h2>prefix: <b>---</b></h2>
         <p>
           Trzy boty muzyczne to <b>istne&nbsp;szaleństwo</b>! Jesteś pewien,
-          że&nbsp;potrzebujesz ich aż&nbsp;tyle na&nbsp;swoim serwerze? Chociaż sumie,
-          to&nbsp;<b>czemu&nbsp;nie...</b>&nbsp;&nbsp;:)
+          że&nbsp;potrzebujesz ich aż&nbsp;tyle na&nbsp;swoim serwerze? Chociaż
+          sumie, to&nbsp;<b>czemu&nbsp;nie...</b>&nbsp;&nbsp;:)
         </p>
-        <a href="https://discord.com/api/oauth2/authorize?client_id=901543130468323399&permissions=414501432640&scope=bot%20applications.commands"
-          target="_blank" class="invite button secondary" tabindex="-1">
-          Zaproś na serwer!<img alt="link" src="@/assets/icons/link.svg" draggable="false" />
+        <a
+          href="https://discord.com/api/oauth2/authorize?client_id=901543130468323399&permissions=414501432640&scope=bot%20applications.commands"
+          target="_blank"
+          class="invite button secondary"
+          tabindex="-1"
+        >
+          Zaproś na serwer!<img
+            alt="link"
+            src="@/assets/icons/link.svg"
+            draggable="false"
+          />
         </a>
       </div>
     </div>
 
     <div class="select">
       <abbr title="Metrum" tabindex="0">
-        <img src="@/assets/bot/metrum1.png" alt="Metrum" @click="changeSlide(1)" id="metrum1" draggable="false" />
+        <img
+          src="@/assets/bot/metrum1.png"
+          alt="Metrum"
+          @click="changeSlide(1)"
+          id="metrum1"
+          draggable="false"
+        />
       </abbr>
       <abbr title="Metrum 2" tabindex="0">
-        <img src="@/assets/bot/metrum2.png" alt="Metrum 2" @click="changeSlide(2)" id="metrum2" draggable="false" />
+        <img
+          src="@/assets/bot/metrum2.png"
+          alt="Metrum 2"
+          @click="changeSlide(2)"
+          id="metrum2"
+          draggable="false"
+        />
       </abbr>
       <abbr title="Metrum 3" tabindex="0">
-        <img src="@/assets/bot/metrum3.png" alt="Metrum 3" @click="changeSlide(3)" id="metrum3" draggable="false" />
+        <img
+          src="@/assets/bot/metrum3.png"
+          alt="Metrum 3"
+          @click="changeSlide(3)"
+          id="metrum3"
+          draggable="false"
+        />
       </abbr>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .slider {
   padding: 1rem 0 2rem;
   height: 38rem;
@@ -94,7 +136,6 @@ function changeSlide(value: number) {
 
   h1 {
     font-family: "Ginto Nord Medium";
-    ;
     font-size: 3.6rem;
   }
 
@@ -105,7 +146,6 @@ function changeSlide(value: number) {
 
     b {
       font-family: "Whitney-Semibold";
-      ;
     }
   }
 }

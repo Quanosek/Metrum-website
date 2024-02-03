@@ -32,8 +32,8 @@ import MySlider from "@/components/sliderComponent.vue";
       <h2>Mnogość funkcji!</h2>
       <p>
         Do dyspozycji jest m.in. zapętlanie, system pomijania
-        z&nbsp;głosowaniem, odtwarzanie transmisji live, pauzowanie,
-        przewijanie i&nbsp;wiele więcej.
+        z&nbsp;głosowaniem, odtwarzanie transmisji live, pauzowanie, przewijanie
+        i&nbsp;wiele więcej.
       </p>
     </div>
 
@@ -43,14 +43,13 @@ import MySlider from "@/components/sliderComponent.vue";
         Zapewnia zawsze błyskawiczną odpowiedź na komendy, auto-dołączanie do
         kanałów głosowych i&nbsp;z&nbsp;nich wychodzenie!
         <br />
-        Kiedy akurat jest niedostępny, znaczy, że&nbsp;wgrywane są
-        aktualizacje.
+        Kiedy akurat jest niedostępny, znaczy, że&nbsp;wgrywane są aktualizacje.
       </p>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .info {
   margin-top: 3rem;
   padding: 0 5%;
