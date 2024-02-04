@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 
+import CopyIcon from "@/components/icons/copyIcon.vue";
+
 const element = defineProps<{
   title: string;
   name: string;
@@ -14,7 +16,7 @@ const copied: any = reactive({
   opacity: 0,
 });
 
-function copyButton() {
+const copyButton = () => {
   navigator.clipboard.writeText(element.title);
 
   copied.visibility = "visible";
@@ -24,51 +26,51 @@ function copyButton() {
     copied.visibility = "hidden";
     copied.opacity = 0;
   }, 1000);
-}
+};
 </script>
 
 <template>
-  <div class="commandHandler">
-    <div class="command">
-      <div class="title">
-        <div class="name">
-          <h2>{{ name }}</h2>
-          <p v-if="aliases">[ {{ aliases }} ]</p>
-        </div>
-
-        <div class="copyHandler">
-          <button title="Kliknij, aby skopiować!" @click="copyButton">
-            <span :style="copied" class="copied">Skopiowano komendę!</span>
-            <img src="@/assets/icons/copy.svg" alt="copy" draggable="false" />
-          </button>
-        </div>
+  <div class="container">
+    <div class="title">
+      <div class="name">
+        <h2>{{ name }}</h2>
+        <p v-if="aliases">[ {{ aliases }} ]</p>
       </div>
 
-      <p class="description">{{ description }}</p>
-      <div v-if="embed" v-html="embed" class="embed"></div>
+      <div class="copyButton">
+        <button title="Kliknij, aby skopiować!" @click="copyButton">
+          <span class="copied" :style="copied">Skopiowano komendę!</span>
+          <CopyIcon />
+        </button>
+      </div>
     </div>
+
+    <p class="description">{{ description }}</p>
+    <div v-if="embed" v-html="embed" class="embed" />
   </div>
 </template>
 
 <style scoped lang="scss">
-.commandHandler {
-  padding: 1.4rem 5vw 0.5rem;
-  width: 80vw;
+.container {
+  padding: 1.5rem 3rem;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  font-size: 1.1rem;
-  background-color: var(--my-1);
-  border: 1px solid var(--web-2);
-  border-radius: var(--roundedMedium);
+  gap: 1rem;
 
-  @media (min-width: 1025px) {
-    &:hover {
-      border-color: var(--dev-3);
-    }
+  font-size: 110%;
+  border-radius: 8px;
+  background-color: #2e3035;
+  border: 1px solid #25272a;
+
+  &:hover {
+    border-color: #121214;
   }
 
-  .command {
-    flex-direction: column;
+  @media (max-width: 768px) {
+    padding: 5% 6%;
+    width: 94%;
+    font-size: 90%;
   }
 }
 
@@ -79,7 +81,6 @@ function copyButton() {
   p {
     position: relative;
     top: 3px;
-    margin: 0;
   }
 }
 
@@ -88,36 +89,46 @@ function copyButton() {
   flex-direction: row;
   align-items: center;
   gap: 0.8rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+
+    p {
+      margin-left: 10px;
+    }
+  }
 }
 
-.copyHandler {
+.copyButton {
   position: relative;
-  display: inline-block;
 
   button {
-    width: 2.5rem;
-    height: 2.5rem;
+    padding: 0.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white);
-    border: 1px solid var(--dev-3);
-    border-radius: var(--roundedMedium);
-    transition: var(--transitionFast);
+    background-color: #ffffff;
+    border: 1px solid #131517;
+    border-radius: 5px;
+    transition: 0.15s, filter 0.5s ease-in;
     user-select: none;
     cursor: pointer;
 
-    img {
-      scale: 0.9;
+    &:hover {
+      background-color: #cdcecf;
+    }
+    &:active {
+      background-color: #b9bbbe;
     }
 
-    @media (min-width: 1025px) {
-      &:hover {
-        background-color: var(--font-color-2);
-      }
+    @media (max-width: 768px) {
+      padding: min(2.5vw, 8px);
 
-      &:active {
-        background-color: var(--font-color-3);
+      svg {
+        height: min(8vw, 1.2rem);
+        width: auto;
       }
     }
   }
@@ -128,53 +139,42 @@ function copyButton() {
   padding: 0.5rem 1.5rem;
   position: absolute;
   bottom: 125%;
-  color: var(--white);
-  background-color: var(--app-1);
-  border-radius: var(--roundedSmall);
-  transition: var(--transitionFast);
-}
+  color: #ffffff;
+  background-color: #40444b;
+  border-radius: 3px;
+  transition: 0.15s, filter 0.5s ease-in;
 
-.copied::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -6px;
-  border-width: 6px;
-  border-style: solid;
-  border-color: var(--app-1) transparent transparent transparent;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #40444b transparent transparent transparent;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    bottom: 30%;
+    right: 125%;
+    font-size: 65%;
+
+    &::after {
+      top: 37%;
+      left: 106%;
+      border-color: transparent transparent transparent #40444b;
+    }
+  }
 }
 
 .description {
-  margin-left: 1.2rem;
-}
+  margin-left: 5px;
 
-@media (max-width: 768px) {
-  .name {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-
-    p {
-      margin-left: 0.8rem;
-    }
-  }
-
-  .description {
-    margin-left: 0.8rem;
-  }
-
-  .copied {
-    padding: 0.5rem 1rem;
-    bottom: 38%;
-    right: 125%;
-    font-size: 0.65rem;
-  }
-
-  .copied::after {
-    top: 37%;
-    left: 106%;
-    border-color: transparent transparent transparent var(--app-1);
+  @media (max-width: 768px) {
+    margin-left: 6px;
+    font-size: 110%;
   }
 }
 </style>

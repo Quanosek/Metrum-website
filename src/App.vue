@@ -2,56 +2,66 @@
 import { ref } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 
+import ButtonIcon from "@/components/icons/linkIcon.vue";
+
 const active = ref(false);
-function isActive() {
+
+const isActive = () => {
   active.value = !active.value;
 
-  if (active.value === true && window.innerWidth <= 768) {
-    var xPos = window.scrollX;
-    var yPos = window.scrollY;
-    window.onscroll = () => {
-      window.scrollTo(xPos, yPos);
-    };
-  } else {
-    window.onscroll = () => {};
-  }
-}
+  if (active.value && window.innerWidth <= 768) {
+    let xPos = window.scrollX;
+    let yPos = window.scrollY;
+
+    window.onscroll = () => window.scrollTo(xPos, yPos);
+  } else window.onscroll = () => {};
+};
 </script>
 
 <template>
   <header>
-    <div class="left">
-      <RouterLink to="/">
-        <abbr title="Metrum - Strona główna">
-          <img src="/favicon.svg" alt="Metrum" class="logo" draggable="false" />
-        </abbr>
-      </RouterLink>
-    </div>
+    <RouterLink to="/" title="Metrum - Strona główna" class="logo">
+      <img
+        src="/favicon.svg"
+        alt="Metrum"
+        width="48"
+        height="35"
+        draggable="false"
+      />
+    </RouterLink>
 
-    <div class="right">
-      <div class="menu" @click="isActive" :class="active ? 'active' : ''">
+    <div>
+      <div class="menu" :class="active ? 'active' : ''" @click="isActive">
         <RouterLink to="/" class="button primary">
-          Strona&nbsp;główna
+          <p>Strona główna</p>
         </RouterLink>
-        <RouterLink to="/commands" class="button primary">
-          Lista komend
+
+        <RouterLink to="/commands" class="button success">
+          <p>Lista komend</p>
         </RouterLink>
-        <RouterLink to="/author" class="button success">
-          O&nbsp;autorze
-        </RouterLink>
+
+        <a
+          href="https://buycoffee.to/kubaklalo"
+          target="_blank"
+          class="button link"
+        >
+          <p>Wesprzyj!</p>
+          <ButtonIcon />
+        </a>
+
         <a
           href="https://top.gg/bot/890577647980146688"
           target="_blank"
           class="button link"
         >
-          Zostaw&nbsp;opinię
-          <img src="@/assets/icons/link.svg" alt="link" draggable="false" />
+          <p>Zostaw opinię!</p>
+          <ButtonIcon />
         </a>
       </div>
 
-      <div class="hamburger" @click="isActive">
-        <div class="bar" :class="active ? 'active' : ''"></div>
-      </div>
+      <button class="hamburger" @click="isActive">
+        <div class="bar" :class="active ? 'active' : ''" />
+      </button>
     </div>
   </header>
 
@@ -60,50 +70,91 @@ function isActive() {
   </main>
 
   <footer>
-    <div class="credits">
-      Stworzone przez
-      <a href="https://github.com/Quanosek" draggable="false">Quanoska</a>.
-    </div>
-    <div class="copyrights">
-      Wszelkie prawa zastrzeżone ©&nbsp;2022-2023 | domena&nbsp;<a
-        href="https://www.klalo.pl"
-        target="_blank"
-        >klalo.pl</a
-      >
-    </div>
+    <p>
+      Stworzone z 💙 przez
+      <a href="https://github.com/Quanosek/" target="_blank" draggable="false">
+        Jakuba Kłało</a
+      >.
+    </p>
+
+    <p>
+      Wszelkie prawa zastrzeżone © 2022-2024 | domena
+      <a href="https://www.klalo.pl" target="_blank" draggable="false">
+        klalo.pl
+      </a>
+    </p>
   </footer>
 </template>
 
 <style scoped lang="scss">
-header {
+main {
+  margin-top: var(--header-height);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+$header-bg-color: #232428;
+
+header,
+footer {
   z-index: 10;
-  position: fixed;
   padding: 0 3%;
-  height: 4rem;
-  width: 94vw;
+  height: var(--header-height);
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--app-4);
-  user-select: none;
+  background-color: $header-bg-color;
+}
 
-  .left {
-    font-size: 1.3rem;
-    font-weight: 800;
+header {
+  position: fixed;
 
-    abbr {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo {
-      height: 2rem;
-    }
+  .logo {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    user-select: none;
   }
 
   .menu {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
+    overflow-y: auto;
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: var(--header-height);
+      right: -100%;
+
+      padding: 2rem 0;
+      width: 100%;
+      height: calc(100svh - var(--header-height));
+      flex-direction: column;
+      align-items: center;
+      transition: 0.25s ease-in-out;
+      gap: 1.2rem;
+
+      &.active {
+        right: 0;
+        background-color: $header-bg-color;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .button {
+      padding: 0.8rem 0;
+      width: 14rem;
+
+      svg {
+        scale: 1.2;
+      }
+    }
   }
 
   .hamburger {
@@ -111,28 +162,30 @@ header {
     padding: 15px 5px;
     cursor: pointer;
 
+    @media (max-width: 768px) {
+      display: block;
+    }
+
     .bar {
-      width: 25px;
-      height: 3px;
-      border-radius: var(--roundedMedium);
-      background-color: var(--white);
-      transition: var(--transitionSmooth);
+      &,
+      &::before,
+      &::after {
+        width: 25px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        transition: 0.2s ease-in-out;
+      }
 
       &::before,
       &::after {
         content: "";
         position: absolute;
-        width: 25px;
-        height: 3px;
-        border-radius: var(--roundedMedium);
-        background-color: var(--white);
-        transition: var(--transitionSmooth);
       }
 
       &::before {
         transform: translateY(-10px);
       }
-
       &::after {
         transform: translateY(10px);
       }
@@ -143,72 +196,27 @@ header {
         &::before {
           transform: rotate(45deg);
         }
-
         &::after {
           transform: rotate(-45deg);
         }
       }
     }
   }
-
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-
-    .menu {
-      z-index: 10;
-      padding: 2rem 0 100vh 0;
-      width: 100%;
-      position: fixed;
-      right: -100%;
-      top: 4rem;
-      flex-direction: column;
-      align-items: center;
-      transition: 0.3s;
-      gap: 1.2rem;
-
-      &.active {
-        right: 0;
-        background-color: var(--app-4);
-      }
-    }
-  }
 }
 
 footer {
-  z-index: 10;
-  padding: 0 3%;
-  margin: 0;
-  height: 4rem;
-  width: 94%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--app-4);
-  font-size: 0.9rem;
+  font-size: 85%;
+  font-weight: 300;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+    font-size: 65%;
+  }
 
   a:hover {
     text-decoration: underline;
-  }
-
-  .copyrights {
-    font-size: 0.8rem;
-    opacity: 0.8;
-  }
-
-  @media (max-width: 768px) {
-    & {
-      padding: 2% 3%;
-      justify-content: center;
-      flex-direction: column;
-      font-size: 0.7rem;
-      gap: 0.8rem;
-    }
-
-    .copyrights {
-      font-size: 0.65rem;
-    }
   }
 }
 </style>

@@ -1,242 +1,202 @@
-@import "./colors.scss";
-
 :root {
-  --roundedSmall: 3px;
-  --roundedMedium: 5px;
-  --roundedBig: 12px;
+  color-scheme: dark;
+  --header-height: 4rem;
+  --blurple-color: #5865f2;
+}
 
-  --transitionFast: 0.15s, filter 0.5s ease-in;
-  --transitionSmooth: 0.35s, filter 1.5s ease-in-out;
+*:focus-visible {
+  box-shadow: 0 0 1px 2px #ffffff;
+}
 
-  --boxShadow: 0 0.5rem 0.8rem 0.2rem rgba(0, 0, 0, 0.15);
-  --textShadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+// Discord fonts
+@font-face {
+  font-family: "Ginto Nord";
+  src: url("@/assets/fonts/ginto_nord-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Ginto Nord Medium";
-  src: url("@/assets/fonts/Ginto Nord Medium.otf");
+  font-family: "gg-sans";
+  src: url("@/assets/fonts/ggsans-Normal.woff2") format("woff2");
+  font-weight: 250;
+  font-display: swap;
 }
-
 @font-face {
-  font-family: "Whitney-Book";
-  src: url("@/assets/fonts/Whitney-Book.otf");
+  font-family: "gg-sans";
+  src: url("@/assets/fonts/ggsans-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
 }
-
 @font-face {
-  font-family: "Whitney-Semibold";
-  src: url("@/assets/fonts/Whitney-Semibold.otf");
+  font-family: "gg-sans";
+  src: url("@/assets/fonts/ggsans-SemiBold.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
 }
-
-/* custom scroll-bar */
-
-::-webkit-scrollbar {
-  width: 0.9em;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--app-4);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--my-1);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--app-1);
-}
-
-/* custom text select color */
-
-::-moz-selection {
-  color: var(--white);
-  background: var(--blurple);
-}
-
-::selection {
-  color: var(--white);
-  background: var(--blurple);
-}
-
-// global classes
-.button {
-  padding: 0.5rem 0.9rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: var(--roundedSmall);
-  font-size: 0.9rem;
+@font-face {
+  font-family: "gg-sans";
+  src: url("@/assets/fonts/ggsans-Bold.woff2") format("woff2");
   font-weight: 600;
-  cursor: pointer;
+  font-display: swap;
+}
+@font-face {
+  font-family: "gg-sans";
+  src: url("@/assets/fonts/ggsans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
 
-  &:hover {
-    transition: 0.15s, filter 0.5s ease-in;
-  }
+// default layout
+html,
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-family: "gg-sans";
+  font-size: 105%;
+  color: #ffffff;
+  background-color: #313338;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  font-family: "Ginto Nord";
+  font-size: 300%;
+}
+
+h2 {
+  font-size: 150%;
+  font-weight: 600;
+}
+
+p {
+  color: #c4c9ce;
+  font-weight: 300;
+}
+
+b {
+  font-weight: 600;
+}
+
+// Discord interactive buttons
+.button {
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 90%;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: 0.15s background-color ease-in-out;
 
   &.primary {
-    background-color: var(--primary);
+    background-color: var(--blurple-color);
 
-    @media (min-width: 1025px) {
-      &:hover {
-        background-color: var(--primary-hover);
-      }
+    &:hover {
+      background-color: #4752c4;
     }
   }
 
   &.secondary,
   &.link {
-    background-color: var(--secondary);
+    background-color: #4e5058;
 
-    @media (min-width: 1025px) {
-      &:hover {
-        background-color: var(--secondary-hover);
-      }
+    &:hover {
+      background-color: #6d6f78;
     }
   }
 
   &.success {
-    background-color: var(--success);
+    background-color: #248046;
 
-    @media (min-width: 1025px) {
-      &:hover {
-        background-color: var(--success-hover);
-      }
+    &:hover {
+      background-color: #1a6334;
     }
   }
 
   &.danger {
-    background-color: var(--danger);
+    background-color: #da373c;
 
-    @media (min-width: 1025px) {
-      &:hover {
-        background-color: var(--danger-hover);
-      }
+    &:hover {
+      background-color: #a12828;
     }
+  }
+
+  p {
+    color: #ffffff;
+    font-weight: 500;
   }
 
   img {
     height: 15px;
     filter: invert(1);
-    position: relative;
-    bottom: 1px;
+    user-select: none;
   }
 
   @media (max-width: 768px) {
-    & {
-      width: 12rem;
-      height: 1.7rem;
-      display: flex;
-      justify-content: center;
-      font-size: 1.1rem;
-      gap: 10px;
+    justify-content: center;
+    font-size: 110%;
 
-      img {
-        height: 20px;
-      }
+    img {
+      height: 16px;
+    }
+  }
+}
+
+.pageTitle {
+  margin: 3rem min(10%, 10rem) 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  font-size: 110%;
+
+  h1 {
+    font-size: 220%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 2.5rem 5%;
+    font-size: 95%;
+
+    h1 {
+      font-size: 175%;
+    }
+
+    p {
+      font-size: 100%;
     }
   }
 }
 
 .embed {
-  padding: 0.5rem 1.8rem;
-  margin: 1rem 0;
-  font-size: 1rem;
-  color: var(--font-color-1);
-  background-color: var(--app-3);
-  border-color: var(--web-1);
+  margin: 0.5rem 0;
+  padding: 0.4rem 1.5rem;
+  background-color: #2b2d31;
+
+  border-color: transparent;
   border-width: 0.5px;
   border-left-width: 0.4rem;
-  border-left-color: var(--secondary);
+  border-left-color: #4f545c;
   border-style: solid;
-  border-radius: var(--roundedMedium);
+  border-radius: 5px;
+
+  @media (max-width: 768px) {
+    margin: 0.25rem 0;
+    padding: 0.25rem 1.25rem;
+  }
 
   p {
     margin: 0.8rem 0;
+    color: #ffffff;
   }
-
-  b {
-    font-family: "Whitney-Semibold";
-  }
-
-  @media (max-width: 768px) {
-    & {
-      padding: 0.25rem 1.25rem;
-    }
-  }
-}
-
-.start {
-  text-align: center;
-  font-size: 1.15rem;
-  margin: 3rem 10rem 1rem 10rem;
-
-  h1 {
-    font-family: "Ginto Nord Medium";
-    margin-bottom: 2rem;
-    text-align: center;
-    font-size: 2.2rem;
-  }
-
-  @media (max-width: 768px) {
-    & {
-      font-size: 1.1rem;
-      margin: 2rem 5% 0 5%;
-    }
-
-    h1 {
-      font-size: 1.75rem;
-    }
-
-    p {
-      font-size: 1rem;
-    }
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-}
-
-// reset style
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--app-2);
-  color: var(--font-color-2);
-  font-family: "Whitney-Book";
-}
-
-main {
-  margin: 4rem 0 3rem 0;
-  min-height: 94vh;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-  color: var(--white);
-}
-
-h2 {
-  font-family: "Whitney-Semibold";
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  color: var(--white);
-  text-decoration: none;
 }

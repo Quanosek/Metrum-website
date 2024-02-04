@@ -1,354 +1,403 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
+
+import LinkIcon from "@/components/icons/hiperlinkIcon.vue";
 import Command from "@/components/commandComponent.vue";
 </script>
 
 <template>
-  <div class="start">
-    <h1>Lista dostępnych komend</h1>
-    <p>
-      Na&nbsp;tej stronie znajdziesz <b>pełną listę</b> obsługiwanych komend.
-      Bot&nbsp;obsługuje <b>tradycyjne komendy</b> (przez podanie prefixu
-      i&nbsp;wpisanie nazwy komendy lub jej skrótu) oraz tzw.
-      <b>slash&nbsp;commands</b>, czyli&nbsp;komendy po&nbsp;ukośniku -
-      już&nbsp;wbudowane w&nbsp;panel pisania wiadomości na&nbsp;kanale
-      tekstowym.
-    </p>
-    <p>
-      Przed&nbsp;użyciem komend <b>koniecznie upewnij się</b>, że&nbsp;bot
-      posiada odpowiednie uprawnienia do&nbsp;wysyłania wiadomości, czytania ich
-      i&nbsp;reagowania. Brak&nbsp;tych uprawnień może powodować problemy
-      z&nbsp;działaniem komend, niereagowaniu na&nbsp;nie lub ostatecznie
-      do&nbsp;wyłączenia bota.
-    </p>
-    <p>
-      Jeśli&nbsp;zapomnisz jaki ustawiłeś prefix, nic&nbsp;nie&nbsp;szkodzi,
-      wystarczy, że&nbsp;oznaczysz bota w&nbsp;wiadomości
-      (<b>wpisując&nbsp;@Metrum</b>), on&nbsp;wtedy przypomni&nbsp;Ci
-      najpotrzebniejsze informacje!
-    </p>
-  </div>
+  <div class="pageTitle">
+    <h1>Lista wszystkich komend</h1>
 
-  <div class="category" id="song">
-    <RouterLink to="/commands#song" draggable="false">
-      <h2>Utwór:</h2>
-    </RouterLink>
-
-    <div class="grid">
-      <Command
-        title="forward"
-        name="⏩ | Forward"
-        description="Przewinięcie utworu do&nbsp;przodu o&nbsp;podaną wartość (domyślnie: 10&nbsp;sekund)"
-        aliases="-fw"
-      />
-
-      <Command
-        title="lyrics"
-        name="📄 | Lyrics"
-        description="Wyświetlenie tekstu dla&nbsp;obecnie odtwarzanego, lub&nbsp;podanego utworu"
-        aliases="-ly, -l"
-      />
-
-      <Command
-        title="nowplaying"
-        name="💿 | Nowplaying"
-        description="Informacje o&nbsp;obecnie odtwarzanym utworze"
-        aliases="-np"
-      />
-
-      <Command
-        title="pause"
-        name="⏯️ | Pause"
-        description="Wstrzymanie/wznowienie odtwarzania utworu"
-        aliases="-ps"
-      />
-
-      <Command
-        title="play"
-        name="🎵 | Play"
-        description="Odtwarzanie muzyki (podaj&nbsp;tytuł utworu lub&nbsp;dowolny link)"
-        aliases="-p"
-      />
-
-      <Command
-        title="resume"
-        name="▶️ | Resume"
-        description="Wznowienie odtwarzania utworu"
-        aliases="-rsm, -rs"
-      />
-
-      <Command
-        title="rewind"
-        name="⏪ | Rewind"
-        description="Przewinięcie utworu do&nbsp;tyłu o&nbsp;podaną wartość (domyślnie: 10&nbsp;sekund)"
-        aliases="-rw"
-      />
-
-      <Command
-        title="seek"
-        name="⏺️ | Seek"
-        description="Przewinięcie obecnie&nbsp;granego utworu do&nbsp;podanej wartości"
-        aliases="-sk"
-      />
-
-      <Command
-        title="skip"
-        name="⏭️ | Skip"
-        description="Pominięcie obecnie&nbsp;granego utworu (głosowanie)"
-        aliases="-s"
-      />
+    <div>
+      <p>
+        Na tej stronie znajdziesz <b>pełną listę</b> obsługiwanych komend. Bot
+        obsługuje <b>tradycyjne komendy</b> (przez podanie prefixu i wpisanie
+        nazwy komendy lub jej skrótu) oraz tzw. <b>slash commands</b>, czyli
+        komendy po ukośniku - już wbudowane w panel pisania wiadomości na kanale
+        tekstowym.
+      </p>
+      <p>
+        Przed użyciem komend <b>koniecznie upewnij się</b>, że bot posiada
+        odpowiednie uprawnienia do wysyłania wiadomości, czytania ich i
+        reagowania. Brak tych uprawnień może powodować problemy z działaniem
+        komend, niereagowaniu na nie lub ostatecznie do wyłączenia bota.
+      </p>
+      <p>
+        Jeśli zapomnisz jaki ustawiłeś prefix, nic nie szkodzi, wystarczy, że
+        oznaczysz bota w wiadomości (<b>wpisując @Metrum</b>), on wtedy
+        przypomni Ci najpotrzebniejsze informacje!
+      </p>
     </div>
   </div>
 
-  <div class="category" id="queue">
-    <RouterLink to="/commands#queue" draggable="false">
-      <h2>Kolejka:</h2>
-    </RouterLink>
+  <div class="commands">
+    <section id="song">
+      <div class="title">
+        <h2>Utwór:</h2>
 
-    <div class="grid">
-      <Command
-        title="addend"
-        name="🔚 | Addend"
-        description="Dodanie obecnie&nbsp;granego utworu jeszcze&nbsp;raz, na&nbsp;koniec kolejki"
-        aliases="-ade, -ae"
-      />
+        <RouterLink to="/commands#song">
+          <LinkIcon />
+        </RouterLink>
+      </div>
 
-      <Command
-        title="addrelated"
-        name="↘️ | Addrelated"
-        description="Dodanie podobnego do&nbsp;obecnie granego utworu na&nbsp;koniec kolejki"
-        aliases="-adr, -ar"
-      />
+      <div class="list">
+        <Command
+          title="forward"
+          name="⏩ | Forward"
+          description="Przewinięcie utworu do przodu o podaną wartość (domyślnie: 10 sekund)"
+          aliases="-fw"
+        />
 
-      <Command
-        title="filter"
-        name="🪄 | Filter"
-        description="Ustaw filtr na&nbsp;odtwarzaną muzykę (ponowne wybranie danego filtru wyłączy&nbsp;go)"
-        aliases="-f"
-        embed="<p><b>Dostępne&nbsp;filtry:</b></p>
+        <Command
+          title="lyrics"
+          name="📄 | Lyrics"
+          description="Wyświetlenie tekstu dla obecnie odtwarzanego, lub podanego utworu"
+          aliases="-ly, -l"
+        />
+
+        <Command
+          title="nowplaying"
+          name="💿 | Nowplaying"
+          description="Informacje o obecnie odtwarzanym utworze"
+          aliases="-np"
+        />
+
+        <Command
+          title="pause"
+          name="⏯️ | Pause"
+          description="Wstrzymanie/wznowienie odtwarzania utworu"
+          aliases="-ps"
+        />
+
+        <Command
+          title="play"
+          name="🎵 | Play"
+          description="Odtwarzanie muzyki (podaj tytuł utworu lub dowolny link)"
+          aliases="-p"
+        />
+
+        <Command
+          title="resume"
+          name="▶️ | Resume"
+          description="Wznowienie odtwarzania utworu"
+          aliases="-rsm, -rs"
+        />
+
+        <Command
+          title="rewind"
+          name="⏪ | Rewind"
+          description="Przewinięcie utworu do tyłu o podaną wartość (domyślnie: 10 sekund)"
+          aliases="-rw"
+        />
+
+        <Command
+          title="seek"
+          name="⏺️ | Seek"
+          description="Przewinięcie obecnie granego utworu do podanej wartości"
+          aliases="-sk"
+        />
+
+        <Command
+          title="skip"
+          name="⏭️ | Skip"
+          description="Pominięcie obecnie granego utworu (głosowanie)"
+          aliases="-s"
+        />
+      </div>
+    </section>
+
+    <section id="queue">
+      <div class="title">
+        <h2>Kolejka:</h2>
+
+        <RouterLink to="/commands#queue">
+          <LinkIcon />
+        </RouterLink>
+      </div>
+
+      <div class="list">
+        <Command
+          title="addend"
+          name="🔚 | Addend"
+          description="Dodanie obecnie granego utworu jeszcze raz, na koniec kolejki"
+          aliases="-ade, -ae"
+        />
+
+        <Command
+          title="addrelated"
+          name="↘️ | Addrelated"
+          description="Dodanie podobnego do obecnie granego utworu na koniec kolejki"
+          aliases="-adr, -ar"
+        />
+
+        <Command
+          title="filter"
+          name="🪄 | Filter"
+          description="Ustaw filtr na odtwarzaną muzykę (ponowne wybranie danego filtru wyłączy go)"
+          aliases="-f"
+          embed="<p><b>Dostępne filtry:</b></p>
           <p>disable, 3d, bassboost, earwax, echo, flanger, gate, haas, karaoke, mcompand, nightcore, phaser, reverse, surround, tremolo, vaporwave.</p>"
-      />
+        />
 
-      <Command
-        title="previous"
-        name="⏮️ | Previous"
-        description="Odtworzenie poprzednio&nbsp;granego utworu w&nbsp;kolejce (głosowanie)"
-        aliases="-prv, -pr"
-      />
+        <Command
+          title="previous"
+          name="⏮️ | Previous"
+          description="Odtworzenie poprzednio granego utworu w kolejce (głosowanie)"
+          aliases="-prv, -pr"
+        />
 
-      <Command
-        title="queue"
-        name="🎶 | Queue"
-        description="Informacje o&nbsp;obecnej kolejce utworów"
-        aliases="-q"
-      />
+        <Command
+          title="queue"
+          name="🎶 | Queue"
+          description="Informacje o obecnej kolejce utworów"
+          aliases="-q"
+        />
 
-      <Command
-        title="radio"
-        name="📻 | Radio"
-        description="Auto-odtwarzanie podobnych utworów, gdy&nbsp;skończy&nbsp;się kolejka (radio utworu)"
-        aliases="-r"
-      />
+        <Command
+          title="radio"
+          name="📻 | Radio"
+          description="Auto-odtwarzanie podobnych utworów, gdy skończy się kolejka (radio utworu)"
+          aliases="-r"
+        />
 
-      <Command
-        title="repeat"
-        name="🔁 | Repeat"
-        description="Przełączanie zapętlenia: utworu/kolejki/wyłączone"
-        aliases="-rpt, -rp"
-      />
+        <Command
+          title="repeat"
+          name="🔁 | Repeat"
+          description="Przełączanie zapętlenia: utworu/kolejki/wyłączone"
+          aliases="-rpt, -rp"
+        />
 
-      <Command
-        title="shuffle"
-        name="🔀 | Shuffle"
-        description="Jednorazowe wymieszanie kolejki utworów (głosowanie)"
-        aliases="-shf, -sh"
-      />
-    </div>
-  </div>
+        <Command
+          title="shuffle"
+          name="🔀 | Shuffle"
+          description="Jednorazowe wymieszanie kolejki utworów (głosowanie)"
+          aliases="-shf, -sh"
+        />
+      </div>
+    </section>
 
-  <div class="category" id="other">
-    <RouterLink to="/commands#other" draggable="false">
-      <h2>Inne:</h2>
-    </RouterLink>
+    <section id="other">
+      <div class="title">
+        <h2>Inne:</h2>
 
-    <div class="grid">
-      <Command
-        title="search"
-        name="🔍 | Search"
-        description="Wyszukiwanie utworów podobnych do&nbsp;obecnie granego lub&nbsp;po&nbsp;podanym tytule"
-        aliases="-sr"
-      />
+        <RouterLink to="/commands#other">
+          <LinkIcon />
+        </RouterLink>
+      </div>
 
-      <Command
-        title="activity"
-        name="🪁 | Activity"
-        description="Włączanie aktywności Discord na&nbsp;kanale głosowym"
-        embed="<p><b>Darmowe aktywności:</b></p>
-          <p>Ask&nbsp;Away, Know&nbsp;What&nbsp;I&nbsp;Meme, Sketch&nbsp;Heads, Watch&nbsp;Together, Word&nbsp;Snacks.</p>
-          <p><b>Wymagane ulepszenie serwera na&nbsp;poziomie&nbsp;1:</b></p>
-          <p>Blazing&nbsp;8s, Bobble&nbsp;League, Checkers&nbsp;In&nbsp;The&nbsp;Park, Chess&nbsp;In&nbsp;The&nbsp;Park, Land-io, Letter&nbsp;League, Poker&nbsp;Night, Putt&nbsp;Party, SpellCast.</p>"
-      />
+      <div class="list">
+        <Command
+          title="search"
+          name="🔍 | Search"
+          description="Wyszukiwanie utworów podobnych do obecnie granego lub po podanym tytule"
+          aliases="-sr"
+        />
 
-      <Command
-        title="watch"
-        name="📺 | Watch"
-        description="Aktywność YouTube Watch&nbsp;Together"
-        aliases="-wt, -w"
-        embed="<p>Jest to&nbsp;wydzielona komenda /activity Watch Together i&nbsp;działa tak samo.</p>"
-      />
-    </div>
-  </div>
+        <Command
+          title="activity"
+          name="🪁 | Activity"
+          description="Włączanie aktywności Discord na kanale głosowym"
+          embed="<p><b>Darmowe aktywności:</b></p>
+          <p>Ask Away, Know What I Meme, Sketch Heads, Watch Together, Word Snacks.</p>
+          <p><b>Wymagane ulepszenie serwera na poziomie 1:</b></p>
+          <p>Blazing 8s, Bobble League, Checkers In The Park, Chess In The Park, Land-io, Letter League, Poker Night, Putt Party, SpellCast.</p>"
+        />
 
-  <div class="category" id="info">
-    <RouterLink to="/commands#info" draggable="false">
-      <h2>Informacje:</h2>
-    </RouterLink>
+        <Command
+          title="watch"
+          name="📺 | Watch"
+          description="Aktywność YouTube Watch Together"
+          aliases="-wt, -w"
+          embed="<p>Jest to wydzielona komenda /activity Watch Together i działa tak samo.</p>"
+        />
+      </div>
+    </section>
 
-    <div class="grid">
-      <Command
-        title="donate"
-        name="🪙 | Donate"
-        description="Link do&nbsp;wsparcia twórcy"
-        aliases="-dn, -dt"
-      />
+    <section id="info">
+      <div class="title">
+        <h2>Informacje:</h2>
 
-      <Command
-        title="help"
-        name="❓ | Help"
-        description="Wiadomość informacyjna o&nbsp;bocie; Opis&nbsp;dla wybranej komendy (podaj&nbsp;nazwę lub&nbsp;alias)"
-        aliases="-h"
-      />
+        <RouterLink to="/commands#info">
+          <LinkIcon />
+        </RouterLink>
+      </div>
 
-      <Command
-        title="invite"
-        name="📧 | Invite"
-        description="Link z&nbsp;zaproszeniem bota"
-        aliases="-inv, -iv"
-      />
+      <div class="list">
+        <Command
+          title="donate"
+          name="🪙 | Donate"
+          description="Link do wsparcia twórcy"
+          aliases="-dn, -dt"
+        />
 
-      <Command
-        title="opinion"
-        name="📣 | Opinion"
-        description="Link z&nbsp;możliwością zostawienia opinii o&nbsp;bocie"
-        aliases="-op"
-      />
+        <Command
+          title="help"
+          name="❓ | Help"
+          description="Wiadomość informacyjna o bocie; Opis dla wybranej komendy (podaj nazwę lub alias)"
+          aliases="-h"
+        />
 
-      <Command
-        title="ping"
-        name="🏓 | Ping"
-        description="Sprawdzenie pingu bota"
-        aliases="-pg"
-      />
-    </div>
-  </div>
+        <Command
+          title="invite"
+          name="📧 | Invite"
+          description="Link z zaproszeniem bota"
+          aliases="-inv, -iv"
+        />
 
-  <div class="category" id="moderation">
-    <RouterLink to="/commands#moderation" draggable="false">
-      <h2>Moderacja:</h2>
-    </RouterLink>
+        <Command
+          title="opinion"
+          name="📣 | Opinion"
+          description="Link z możliwością zostawienia opinii o bocie"
+          aliases="-op"
+        />
 
-    <div class="grid">
-      <Command
-        title="add"
-        name="➕ | Add"
-        description="Dodanie podanego utworu jako następny w&nbsp;kolejce (podaj&nbsp;tytuł utworu lub&nbsp;wklej dowolny link)"
-        aliases="-ad"
-      />
+        <Command
+          title="ping"
+          name="🏓 | Ping"
+          description="Sprawdzenie pingu bota"
+          aliases="-pg"
+        />
+      </div>
+    </section>
 
-      <Command
-        title="clear"
-        name="🧹 | Clear"
-        description="Wyczyszczenie całej&nbsp;kolejki (łącznie z&nbsp;obecnie granym utworem)"
-        aliases="-c"
-      />
+    <section id="moderation">
+      <div class="title">
+        <h2>Moderacja:</h2>
 
-      <Command
-        title="forceleave"
-        name="🚪 | Forceleave"
-        description="Wymuszenie wyjścia z&nbsp;kanału głosowego"
-        aliases="-fl"
-      />
+        <RouterLink to="/commands#moderation">
+          <LinkIcon />
+        </RouterLink>
+      </div>
 
-      <Command
-        title="forceplay"
-        name="🎵 | Forceplay"
-        description="Wymuszenie puszczenia podanego utworu (podaj&nbsp;tytuł utworu lub&nbsp;wklej dowolny link)"
-        aliases="-fp"
-      />
+      <div class="list">
+        <Command
+          title="add"
+          name="➕ | Add"
+          description="Dodanie podanego utworu jako następny w kolejce (podaj tytuł utworu lub wklej dowolny link)"
+          aliases="-ad"
+        />
 
-      <Command
-        title="forceskip"
-        name="⏭️ | Forceskip"
-        description="Wymuszenie pominięcia utworu"
-        aliases="-fs"
-      />
+        <Command
+          title="clear"
+          name="🧹 | Clear"
+          description="Wyczyszczenie całej kolejki (łącznie z obecnie granym utworem)"
+          aliases="-c"
+        />
 
-      <Command
-        title="jump"
-        name="↪️ | Jump"
-        description="Pominięcie określonej&nbsp;liczby utworów w&nbsp;kolejce (domyślnie:&nbsp;1)"
-        aliases="-jmp, -jp, -j"
-      />
+        <Command
+          title="forceleave"
+          name="🚪 | Forceleave"
+          description="Wymuszenie wyjścia z kanału głosowego"
+          aliases="-fl"
+        />
 
-      <Command
-        title="move"
-        name="↩️ | Move"
-        description="Przesunięcie wybranej pozycji w&nbsp;kolejce utworów"
-        aliases="-mv"
-      />
+        <Command
+          title="forceplay"
+          name="🎵 | Forceplay"
+          description="Wymuszenie puszczenia podanego utworu (podaj tytuł utworu lub wklej dowolny link)"
+          aliases="-fp"
+        />
 
-      <Command
-        title="prefix"
-        name="❗ | Prefix"
-        description="Zmiana prefixu bota"
-        aliases="-pref, -pf, -px"
-      />
+        <Command
+          title="forceskip"
+          name="⏭️ | Forceskip"
+          description="Wymuszenie pominięcia utworu"
+          aliases="-fs"
+        />
 
-      <Command
-        title="remove"
-        name="✖️ | Remove"
-        description="Usunięcie wybranej pozycji z&nbsp;kolejki utworów (domyślnie obecnie grany)"
-        aliases="-rmv, -rm"
-      />
+        <Command
+          title="jump"
+          name="↪️ | Jump"
+          description="Pominięcie określonej liczby utworów w kolejce (domyślnie: 1)"
+          aliases="-jmp, -jp, -j"
+        />
 
-      <Command
-        title="volume"
-        name="🔈 | Volume"
-        description="Zmiana głośności bota"
-        aliases="-v"
-        embed="<p>Samo użycie komendy wymaga uprawnień administratora!</p>"
-      />
-    </div>
+        <Command
+          title="move"
+          name="↩️ | Move"
+          description="Przesunięcie wybranej pozycji w kolejce utworów"
+          aliases="-mv"
+        />
+
+        <Command
+          title="prefix"
+          name="❗ | Prefix"
+          description="Zmiana prefixu bota"
+          aliases="-pref, -pf, -px"
+        />
+
+        <Command
+          title="remove"
+          name="✖️ | Remove"
+          description="Usunięcie wybranej pozycji z kolejki utworów (domyślnie obecnie grany)"
+          aliases="-rmv, -rm"
+        />
+
+        <Command
+          title="volume"
+          name="🔈 | Volume"
+          description="Zmiana głośności bota"
+          aliases="-v"
+          embed="<p>Samo użycie komendy wymaga uprawnień administratora!</p>"
+        />
+      </div>
+    </section>
   </div>
 </template>
 
 <style scoped lang="scss">
-.category {
+.commands {
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
+  gap: 3rem;
 
-  h2 {
-    font-family: "Ginto Nord Medium";
-    padding: 1rem 0 1rem 6rem;
-    font-size: 1.6rem;
-    background-color: var(--app-3);
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
-    @media (max-width: 768px) {
-      & {
-        padding: 1rem 0 1rem 3rem;
-        font-size: 1.6rem;
-      }
-    }
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+    gap: 2rem;
   }
 }
 
-.grid {
-  margin-top: 1.2rem;
+.title {
+  padding: 1rem 0 1rem 10%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #2b2d31;
+
+  h2 {
+    font-size: 175%;
+  }
+
+  a {
+    padding: 0.25rem;
+    display: none;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  &:hover a {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.8rem 0 0.8rem 8%;
+  }
+}
+
+.list {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 </style>

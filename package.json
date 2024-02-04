@@ -1,5 +1,5 @@
 {
-  "version": "3.2.0",
+  "version": "3.3.0",
   "name": "metrum",
   "description": "Official website for Metrum - Discord music bot",
   "type": "module",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "sass": "^1.70.0",
+    "the-new-css-reset": "^1.11.2",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },

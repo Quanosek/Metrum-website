@@ -21,18 +21,6 @@ const router = createRouter({
       meta: { title: "Lista Komend" },
       component: () => import("../views/commandsView.vue"),
     },
-    {
-      path: "/author",
-      name: "author",
-      meta: { title: "O Autorze" },
-      component: () => import("../views/authorView.vue"),
-    },
-    {
-      path: "/opinion",
-      component: () => {
-        window.location.href = "https://top.gg/bot/890577647980146688";
-      },
-    },
     // invite links redirect
     {
       path: "/invite",
@@ -57,6 +45,7 @@ const router = createRouter({
     },
   ],
 
+  // scroll to top on change
   scrollBehavior(to) {
     if (to.hash) {
       return { el: to.hash, top: 80, behavior: "smooth" };
@@ -67,10 +56,11 @@ const router = createRouter({
 });
 
 // meta title
-const DEFAULT_TITLE = "Metrum - Najlepszy Polski Bot Muzyczny Discord";
+const title = "Metrum - najlepszy darmowy bot muzyczny Discord";
+
 router.beforeEach((to) => {
-  if (to.meta.title) document.title = to.meta.title + " | " + DEFAULT_TITLE;
-  else document.title = DEFAULT_TITLE;
+  if (to.meta.title) document.title = to.meta.title + " | " + title;
+  else document.title = title;
 });
 
 export default router;
