@@ -14,7 +14,7 @@ app.use(router);
 if (!import.meta.env.DEV) {
   app.use(VueGtag, {
     config: {
-      id: import.meta.env.GOOGLE_ANALYTICS_PROPERTY_ID,
+      id: import.meta.env.VITE_GOOGLE_ANALYTICS_ID,
     },
   });
 }
