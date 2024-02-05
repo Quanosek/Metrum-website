@@ -9,10 +9,10 @@
     <div>
       <p>
         Strona, z którą próbujesz się połączyć napotkała pewien problem. Sprawdź
-        poprawność linku lub spróbuj ponownie później.
+        poprawność linku i spróbuj ponownie później.
       </p>
       <p>
-        Jeśli błąd będzie się powtarzać
+        Jeśli błąd się powtarza, koniecznie
         <a href="mailto:kubaklalo@gmail.com">skontaktuj się</a>
         z administratorem strony.
       </p>

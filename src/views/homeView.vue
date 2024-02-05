@@ -35,8 +35,8 @@ const changeSlide = (value: number) => {
         </div>
 
         <p>
-          Na co czekasz? <b>Dodaj go na swój serwer</b> i ciesz się muzyką na
-          swoich kanałach głosowych!
+          Nie ma na co czekać! <b>Dodaj go na swój serwer</b> i ciesz się muzyką
+          bezpośrednio na swoich kanałach głosowych.
         </p>
 
         <a
@@ -58,8 +58,8 @@ const changeSlide = (value: number) => {
 
         <p>
           Jeśli pierwszy bot jest zbyt obciążony, lub gdy chcesz odtwarzać
-          muzykę na <b>dwóch różnych kanałach głosowych</b>, ten bot jest
-          <b>idealnym</b> rozwiązaniem!
+          muzykę na <b>dwóch różnych kanałach głosowych</b> jednocześnie, ten
+          bot jest <b>idealnym</b> rozwiązaniem!
         </p>
 
         <a
@@ -81,7 +81,7 @@ const changeSlide = (value: number) => {
 
         <p>
           Trzy boty muzyczne to <b>istne szaleństwo</b>! Jesteś pewien, że
-          potrzebujesz ich aż tyle na swoim serwerze? Chociaż sumie, to
+          potrzebujesz ich aż tyle na swoim serwerze? Chociaż w sumie to
           <b>czemu nie...</b> {{ ":)" }}
         </p>
 
@@ -138,17 +138,17 @@ const changeSlide = (value: number) => {
 
   <div class="info">
     <section>
-      <h2>Używaj jak chcesz!</h2>
+      <h2>Używaj jak chcesz</h2>
 
       <p>Możesz bez problemu korzystać z własnego prefixu, jak i ukośnika!</p>
     </section>
 
     <section>
-      <h2>Pełna dowolność!</h2>
+      <h2>Pełna dowolność</h2>
 
       <p>
-        Bot umożliwia odtwarzanie po wyszukanym tytule, jak i linkach. Możesz
-        tworzyć własne kolejki, lub włączyć auto-odtwarzanie!
+        Bot umożliwia odtwarzanie po wyszukanym tytule lub wklejonych linkach.
+        Możesz tworzyć własne kolejki, albo włączyć auto-odtwarzanie!
       </p>
     </section>
 
@@ -179,11 +179,11 @@ const changeSlide = (value: number) => {
     </div>
 
     <section>
-      <h2>Mnogość funkcji!</h2>
+      <h2>Mnogość funkcji</h2>
 
       <p>
-        Do dyspozycji jest m.in. zapętlanie, system pomijania z głosowaniem,
-        odtwarzanie transmisji live, pauzowanie, przewijanie i wiele więcej.
+        Do dyspozycji jest m.in.: zapętlanie, system pomijania z głosowaniem,
+        odtwarzanie transmisji live, pauzowanie, przewijanie i wiele więcej!
       </p>
     </section>
 

@@ -6,7 +6,7 @@ const router = createRouter({
     // error page
     {
       path: "/:pathMatch(.*)*",
-      meta: { title: "Błąd Strony" },
+      meta: { title: "Nie znaleziono" },
       component: () => import("../views/errorView.vue"),
     },
     // website views
@@ -18,7 +18,7 @@ const router = createRouter({
     {
       path: "/commands",
       name: "commands",
-      meta: { title: "Lista Komend" },
+      meta: { title: "Lista komend" },
       component: () => import("../views/commandsView.vue"),
     },
     // invite links redirect
@@ -59,7 +59,7 @@ const router = createRouter({
 const title = "Metrum - najlepszy darmowy bot muzyczny Discord";
 
 router.beforeEach((to) => {
-  if (to.meta.title) document.title = to.meta.title + " | " + title;
+  if (to.meta.title) document.title = to.meta.title + " / " + title;
   else document.title = title;
 });
 

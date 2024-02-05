@@ -14,19 +14,20 @@ import Command from "@/components/commandComponent.vue";
         Na tej stronie znajdziesz <b>pełną listę</b> obsługiwanych komend. Bot
         obsługuje <b>tradycyjne komendy</b> (przez podanie prefixu i wpisanie
         nazwy komendy lub jej skrótu) oraz tzw. <b>slash commands</b>, czyli
-        komendy po ukośniku - już wbudowane w panel pisania wiadomości na kanale
+        komendy po ukośniku - wbudowane w panel pisania wiadomości na kanale
         tekstowym.
       </p>
       <p>
         Przed użyciem komend <b>koniecznie upewnij się</b>, że bot posiada
-        odpowiednie uprawnienia do wysyłania wiadomości, czytania ich i
-        reagowania. Brak tych uprawnień może powodować problemy z działaniem
-        komend, niereagowaniu na nie lub ostatecznie do wyłączenia bota.
+        odpowiednie uprawnienia do wysyłania wiadomości, odczytywania ich
+        zawartości oraz reagowania. Brak tych uprawnień może powodować problemy
+        z działaniem komend, niereagowaniem na nie, a w ostateczności do
+        ponownego uruchomienia bota.
       </p>
       <p>
         Jeśli zapomnisz jaki ustawiłeś prefix, nic nie szkodzi, wystarczy, że
-        oznaczysz bota w wiadomości (<b>wpisując @Metrum</b>), on wtedy
-        przypomni Ci najpotrzebniejsze informacje!
+        oznaczysz bota w wiadomości (<b>wpisując @Metrum</b>), wtedy przypomni
+        Ci swoje najpotrzebniejsze informacje!
       </p>
     </div>
   </div>
@@ -52,7 +53,7 @@ import Command from "@/components/commandComponent.vue";
         <Command
           title="lyrics"
           name="📄 | Lyrics"
-          description="Wyświetlenie tekstu dla obecnie odtwarzanego, lub podanego utworu"
+          description="Wyświetlenie tekstu dla obecnie odtwarzanego lub podanego utworu"
           aliases="-ly, -l"
         />
 
@@ -82,6 +83,7 @@ import Command from "@/components/commandComponent.vue";
           name="▶️ | Resume"
           description="Wznowienie odtwarzania utworu"
           aliases="-rsm, -rs"
+          embed="<p>Komenda /pause pokrywa się z działaniem tej komendy.</p>"
         />
 
         <Command
@@ -120,7 +122,7 @@ import Command from "@/components/commandComponent.vue";
         <Command
           title="addend"
           name="🔚 | Addend"
-          description="Dodanie obecnie granego utworu jeszcze raz, na koniec kolejki"
+          description="Dodanie obecnie granego utworu na koniec kolejki"
           aliases="-ade, -ae"
         />
 
@@ -136,15 +138,15 @@ import Command from "@/components/commandComponent.vue";
           name="🪄 | Filter"
           description="Ustaw filtr na odtwarzaną muzykę (ponowne wybranie danego filtru wyłączy go)"
           aliases="-f"
-          embed="<p><b>Dostępne filtry:</b></p>
+          embed="<p><b>Dostępne opcje:</b></p>
           <p>disable, 3d, bassboost, earwax, echo, flanger, gate, haas, karaoke, mcompand, nightcore, phaser, reverse, surround, tremolo, vaporwave.</p>"
         />
 
         <Command
           title="previous"
           name="⏮️ | Previous"
-          description="Odtworzenie poprzednio granego utworu w kolejce (głosowanie)"
-          aliases="-prv, -pr"
+          description="Powrót do poprzednio granego utworu (głosowanie)"
+          aliases="-prev, -pr"
         />
 
         <Command
@@ -164,8 +166,8 @@ import Command from "@/components/commandComponent.vue";
         <Command
           title="repeat"
           name="🔁 | Repeat"
-          description="Przełączanie zapętlenia: utworu/kolejki/wyłączone"
-          aliases="-rpt, -rp"
+          description="Przełączanie trybów zapętlenia: utworu/kolejki/wyłączone"
+          aliases="-rep, -rp"
         />
 
         <Command
@@ -209,7 +211,7 @@ import Command from "@/components/commandComponent.vue";
           name="📺 | Watch"
           description="Aktywność YouTube Watch Together"
           aliases="-wt, -w"
-          embed="<p>Jest to wydzielona komenda /activity Watch Together i działa tak samo.</p>"
+          embed="<p>Komenda /activity Watch Together pokrywa się z działaniem tej komendy.</p>"
         />
       </div>
     </section>
@@ -227,14 +229,14 @@ import Command from "@/components/commandComponent.vue";
         <Command
           title="donate"
           name="🪙 | Donate"
-          description="Link do wsparcia twórcy"
+          description="Link do przekazania wsparcia dla twórcy"
           aliases="-dn, -dt"
         />
 
         <Command
           title="help"
           name="❓ | Help"
-          description="Wiadomość informacyjna o bocie; Opis dla wybranej komendy (podaj nazwę lub alias)"
+          description="Wiadomość informacyjna o bocie; Opis działania wybranej komendy (podaj nazwę lub alias)"
           aliases="-h"
         />
 
@@ -243,13 +245,6 @@ import Command from "@/components/commandComponent.vue";
           name="📧 | Invite"
           description="Link z zaproszeniem bota"
           aliases="-inv, -iv"
-        />
-
-        <Command
-          title="opinion"
-          name="📣 | Opinion"
-          description="Link z możliwością zostawienia opinii o bocie"
-          aliases="-op"
         />
 
         <Command
@@ -295,14 +290,14 @@ import Command from "@/components/commandComponent.vue";
         <Command
           title="forceplay"
           name="🎵 | Forceplay"
-          description="Wymuszenie puszczenia podanego utworu (podaj tytuł utworu lub wklej dowolny link)"
+          description="Wymuszenie odtworzenia podanego utworu (podaj tytuł utworu lub wklej dowolny link)"
           aliases="-fp"
         />
 
         <Command
           title="forceskip"
           name="⏭️ | Forceskip"
-          description="Wymuszenie pominięcia utworu"
+          description="Wymuszenie pominięcia utworu (bez głosowania)"
           aliases="-fs"
         />
 
@@ -330,16 +325,16 @@ import Command from "@/components/commandComponent.vue";
         <Command
           title="remove"
           name="✖️ | Remove"
-          description="Usunięcie wybranej pozycji z kolejki utworów (domyślnie obecnie grany)"
+          description="Usunięcie wybranej pozycji z kolejki utworów (domyślnie: obecnie grany)"
           aliases="-rmv, -rm"
         />
 
         <Command
           title="volume"
           name="🔈 | Volume"
-          description="Zmiana głośności bota"
+          description="Zmiana głośności bota na kanale głosowym (domyślnie: 100%)"
           aliases="-v"
-          embed="<p>Samo użycie komendy wymaga uprawnień administratora!</p>"
+          embed="<p>Komenda wymaga uprawnień administratora!</p>"
         />
       </div>
     </section>
