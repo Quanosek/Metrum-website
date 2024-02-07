@@ -73,8 +73,8 @@ const isActive = () => {
     <p>
       Stworzone z 💙 przez
       <a href="https://github.com/Quanosek/" target="_blank" draggable="false">
-        Jakuba Kłało</a
-      >.
+        Jakuba Kłało
+      </a>
     </p>
 
     <p>

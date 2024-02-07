@@ -100,7 +100,7 @@ const changeSlide = (value: number) => {
     <div class="select">
       <img
         id="metrum1"
-        src="@/assets/bot/metrum1.png"
+        src="@/assets/bot/metrum1.webp"
         alt="Metrum"
         width="140"
         height="140"
@@ -112,7 +112,7 @@ const changeSlide = (value: number) => {
 
       <img
         id="metrum2"
-        src="@/assets/bot/metrum2.png"
+        src="@/assets/bot/metrum2.webp"
         alt="Metrum 2"
         width="140"
         height="140"
@@ -124,7 +124,7 @@ const changeSlide = (value: number) => {
 
       <img
         id="metrum3"
-        src="@/assets/bot/metrum3.png"
+        src="@/assets/bot/metrum3.webp"
         alt="Metrum 3"
         width="140"
         height="140"
@@ -154,26 +154,34 @@ const changeSlide = (value: number) => {
 
     <div class="media">
       <img
-        src="@/assets/images/YouTube.svg"
+        src="@/assets/images/youtube.webp"
         alt="YouTube"
-        width="100"
-        height="100"
+        width="193"
+        height="108"
         draggable="false"
+        style="margin-right: max(-1rem, -2vw)"
       />
-
       <img
-        src="@/assets/images/Spotify.svg"
+        src="@/assets/images/spotify.webp"
         alt="Spotify"
-        width="100"
-        height="100"
+        width="193"
+        height="108"
         draggable="false"
+        style="margin: 0 max(-1rem, -2vw)"
       />
-
       <img
-        src="@/assets/images/SoundCloud.svg"
+        src="@/assets/images/deezer.webp"
+        alt="Deezer"
+        width="193"
+        height="108"
+        draggable="false"
+        style="margin-right: min(1rem, 2vw)"
+      />
+      <img
+        src="@/assets/images/soundcloud.webp"
         alt="SoundCloud"
-        width="180"
-        height="100"
+        width="193"
+        height="108"
         draggable="false"
       />
     </div>
@@ -343,11 +351,12 @@ const changeSlide = (value: number) => {
 }
 
 .info {
-  padding: 3rem 5% 5rem;
+  padding: 3rem 10% 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 4rem;
+  font-size: 125%;
 
   section {
     display: flex;
@@ -360,24 +369,39 @@ const changeSlide = (value: number) => {
       font-size: 200%;
       font-weight: 500;
     }
+
+    p {
+      font-size: 90%;
+    }
   }
 
   @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem 4rem;
+    gap: 12vw;
+    font-size: 95%;
+
+    section p {
+      font-size: 100%;
+    }
   }
 }
 
 .media {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1rem;
+
+  img {
+    width: auto;
+    height: min(108px, 10.5vw);
+  }
 
   @media (max-width: 768px) {
-    gap: 2rem;
+    gap: 4vw;
 
     img {
       width: auto;
-      height: 4rem;
+      height: 11vw;
     }
   }
 }

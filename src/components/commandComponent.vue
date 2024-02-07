@@ -139,6 +139,9 @@ const copyButton = () => {
   padding: 0.5rem 1.5rem;
   position: absolute;
   bottom: 125%;
+
+  font-size: 80%;
+  text-align: center;
   color: #ffffff;
   background-color: #40444b;
   border-radius: 3px;
@@ -159,7 +162,7 @@ const copyButton = () => {
     padding: 0.5rem 1rem;
     bottom: 30%;
     right: 125%;
-    font-size: 65%;
+    font-size: 70%;
 
     &::after {
       top: 37%;

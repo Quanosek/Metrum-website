@@ -121,14 +121,14 @@ import Command from "@/components/commandComponent.vue";
       <div class="list">
         <Command
           title="addend"
-          name="🔚 | Addend"
+          name="➕ | Addend"
           description="Dodanie obecnie granego utworu na koniec kolejki"
           aliases="-ade, -ae"
         />
 
         <Command
           title="addrelated"
-          name="↘️ | Addrelated"
+          name="⤵️ | Addrelated"
           description="Dodanie podobnego do obecnie granego utworu na koniec kolejki"
           aliases="-adr, -ar"
         />
